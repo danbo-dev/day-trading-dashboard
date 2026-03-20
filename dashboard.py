@@ -28,6 +28,10 @@ GITHUB_RAW_SIGNALS_URL = (
     "https://raw.githubusercontent.com/danbo-dev/"
     "day-trading-dashboard/main/signals.json"
 )
+GITHUB_RAW_WATCHLIST_URL = (
+    "https://raw.githubusercontent.com/danbo-dev/"
+    "day-trading-dashboard/main/watchlist.json"
+)
 REFRESH_MS = 3 * 60 * 1000
 MT = pytz.timezone("America/Denver")
 
@@ -52,11 +56,17 @@ for k, v in {"seen_signals": set()}.items():
         st.session_state[k] = v
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
-@st.cache_data(ttl=60)
+@st.cache_data(ttl=180)
 def load_watchlist():
-    if not WATCHLIST_PATH.exists():
-        return {"tickers": [], "generated_at_mt": "Not yet generated"}
-    return json.loads(WATCHLIST_PATH.read_text())
+    try:
+        r = requests.get(GITHUB_RAW_WATCHLIST_URL, timeout=5)
+        if r.status_code == 200:
+            return r.json()
+    except Exception:
+        pass
+    if WATCHLIST_PATH.exists():
+        return json.loads(WATCHLIST_PATH.read_text())
+    return {"tickers": [], "generated_at_mt": "Not yet generated"}
 
 def load_paper_trades():
     if not PAPER_TRADES_PATH.exists(): return []

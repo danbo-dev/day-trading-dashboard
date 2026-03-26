@@ -1,25 +1,6 @@
 {
-  "generated_at": "2026-03-26T03:50:52.972251Z",
-  "generated_at_mt": "2026-03-26 03:50 MT",
-  "count": 2,
-  "tickers": [
-    {
-      "symbol": "ZS",
-      "price": 139.44,
-      "gap_pct": 1.92,
-      "rvol": 0.9,
-      "atr": 6.95,
-      "avg_volume": 3307340,
-      "screener_score": 0.349
-    },
-    {
-      "symbol": "NKE",
-      "price": 52.98,
-      "gap_pct": 0.5,
-      "rvol": 0.86,
-      "atr": 1.45,
-      "avg_volume": 15548400,
-      "screener_score": 0.1923
-    }
-  ]
+  "generated_at": "2026-03-26T14:58:49.856985Z",
+  "generated_at_mt": "2026-03-26 14:58 MT",
+  "count": 0,
+  "tickers": []
 }

@@ -31,8 +31,8 @@ def run_screener() -> list:
 
     filtered = []
     for sym, d in raw.items():
-        if abs(d["gap_pct"]) < 1.5: continue
-        if d["rvol"] < 1.3: continue
+        if abs(d["gap_pct"]) < 0.5: continue   # loosened from 1.5
+        if d["rvol"] < 0.8: continue            # loosened from 1.3
         score = screener_score(d)
         filtered.append({
             "symbol": sym,
@@ -72,3 +72,12 @@ if __name__ == "__main__":
     except Exception as e:
         logger.error(f"Screener failed: {e}", exc_info=True)
         sys.exit(1)
+```
+
+Also go to `.github/workflows/pre_market_screener.yml` and change the install line from:
+```
+- run: pip install yfinance pandas numpy pytz requests
+```
+to:
+```
+- run: pip install yfinance pandas numpy pytz requests lxml

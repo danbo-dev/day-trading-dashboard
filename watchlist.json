@@ -1,6 +1,43 @@
 {
-  "generated_at": "2026-03-30T14:59:14.052623Z",
-  "generated_at_mt": "2026-03-30 14:59 MT",
-  "count": 0,
-  "tickers": []
+  "generated_at": "2026-03-30T21:00:54.553351Z",
+  "generated_at_mt": "2026-03-30 21:00 MT",
+  "count": 4,
+  "tickers": [
+    {
+      "symbol": "ZS",
+      "price": 137.26,
+      "gap_pct": 1.58,
+      "rvol": 1.07,
+      "atr": 7.38,
+      "avg_volume": 2723130,
+      "screener_score": 0.3461
+    },
+    {
+      "symbol": "NOW",
+      "price": 104.97,
+      "gap_pct": 0.65,
+      "rvol": 0.99,
+      "atr": 4.88,
+      "avg_volume": 16639740,
+      "screener_score": 0.285
+    },
+    {
+      "symbol": "BAC",
+      "price": 47.23,
+      "gap_pct": 1.23,
+      "rvol": 0.96,
+      "atr": 1.11,
+      "avg_volume": 44047955,
+      "screener_score": 0.2169
+    },
+    {
+      "symbol": "WMT",
+      "price": 123.5,
+      "gap_pct": 0.67,
+      "rvol": 0.97,
+      "atr": 2.57,
+      "avg_volume": 20902510,
+      "screener_score": 0.181
+    }
+  ]
 }

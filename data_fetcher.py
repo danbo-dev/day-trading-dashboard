@@ -53,20 +53,39 @@ class TickerSnapshot:
 
 def get_universe() -> list:
     try:
-        sp500 = pd.read_html("https://en.wikipedia.org/wiki/List_of_S%26P_500_companies")[0]["Symbol"].tolist()
+        sp500 = pd.read_html(
+            "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies",
+            flavor="lxml"
+        )[0]["Symbol"].tolist()
         sp500 = [s.replace(".", "-") for s in sp500]
-        ndx = pd.read_html("https://en.wikipedia.org/wiki/Nasdaq-100")[4]["Ticker"].tolist()
+        try:
+            ndx_tables = pd.read_html(
+                "https://en.wikipedia.org/wiki/Nasdaq-100",
+                flavor="lxml"
+            )
+            ndx = []
+            for t in ndx_tables:
+                if "Ticker" in t.columns:
+                    ndx = t["Ticker"].tolist()
+                    break
+        except Exception:
+            ndx = []
         combined = list(set(sp500 + ndx))
         logger.info(f"Universe: {len(combined)} tickers")
         return combined
     except Exception as e:
         logger.warning(f"Universe fetch failed ({e}), using fallback")
-        return ["AAPL","MSFT","NVDA","AMZN","GOOGL","META","TSLA","AVGO","AMD","ORCL",
-                "NFLX","ADBE","QCOM","TXN","CRM","NOW","PLTR","PANW","CRWD","ZS",
-                "JPM","GS","MS","BAC","V","MA","UNH","LLY","ABBV","AMGN",
-                "XOM","CVX","COP","HD","COST","WMT","NKE","SBUX","MCD","CMG",
-                "BA","CAT","HON","LMT","RTX","GE","UPS","FDX","UBER","ABNB"]
-
+        return [
+            "AAPL","MSFT","NVDA","AMZN","GOOGL","META","TSLA","AVGO","AMD","ORCL",
+            "NFLX","ADBE","QCOM","TXN","CRM","NOW","PLTR","PANW","CRWD","ZS",
+            "JPM","GS","MS","BAC","V","MA","UNH","LLY","ABBV","AMGN",
+            "XOM","CVX","COP","HD","COST","WMT","NKE","SBUX","MCD","CMG",
+            "BA","CAT","HON","LMT","RTX","GE","UPS","FDX","UBER","ABNB",
+            "SHOP","SNOW","DDOG","NET","COIN","MSTR","ARM","SMCI","MU","AMAT",
+            "LRCX","KLAC","MRVL","DELL","HPQ","IBM","CSCO","INTC","F","GM",
+            "PFE","MRK","JNJ","BMY","GILD","REGN","MRNA","ABBV","TMO","WFC",
+            "C","AXP","PYPL","BKNG","ABNB","UBER","LYFT","DASH","SNAP","PINS",
+        ]
 
 def calculate_vwap(intraday: pd.DataFrame) -> float:
     try:

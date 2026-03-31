@@ -1,6 +1,16 @@
 {
-  "generated_at": "2026-03-31T14:09:23.487338Z",
-  "generated_at_mt": "2026-03-31 14:09 MT",
-  "count": 0,
-  "tickers": []
+  "generated_at": "2026-03-31T14:19:47.181423Z",
+  "generated_at_mt": "2026-03-31 08:19 MT",
+  "count": 1,
+  "tickers": [
+    {
+      "symbol": "MRVL",
+      "price": 94.62,
+      "gap_pct": 9.3,
+      "rvol": 0.7,
+      "atr": 5.11,
+      "avg_volume": 23748255,
+      "screener_score": 0.6679
+    }
+  ]
 }

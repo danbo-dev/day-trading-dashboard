@@ -26,10 +26,13 @@ def load_existing_signals() -> dict:
     if not SIGNALS_PATH.exists():
         return {}
     try:
-        return json.loads(SIGNALS_PATH.read_text())
+        data = json.loads(SIGNALS_PATH.read_text())
+        # Handle case where file contains a list instead of dict
+        if isinstance(data, list):
+            return {}
+        return data
     except Exception:
         return {}
-
 
 def run_monitor():
     status = market_status()

@@ -3,7 +3,7 @@ screener.py — Pre-market screener. Runs at 8:00 AM MT via GitHub Actions.
 Filters S&P500 + NASDAQ100 universe to top 15 day-trade candidates.
 Writes watchlist.json for the dashboard to consume.
 """
-import json, logging, sys
+import json, logging, sys, pytz
 from datetime import datetime
 from pathlib import Path
 from data_fetcher import get_universe, batch_screener_data
@@ -11,6 +11,7 @@ from data_fetcher import get_universe, batch_screener_data
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 WATCHLIST_PATH = Path(__file__).parent / "watchlist.json"
+MT = pytz.timezone("America/Denver")
 
 
 def screener_score(row: dict) -> float:
@@ -29,10 +30,14 @@ def run_screener() -> list:
     raw = batch_screener_data(universe)
     logger.info(f"Raw data: {len(raw)} tickers passed basic filters")
 
+    counts = {"rvol": 0, "passed": 0}
     filtered = []
     for sym, d in raw.items():
-        if abs(d["gap_pct"]) < 0.5: continue   # loosened for mid-day
-        if d["rvol"] < 0.8: continue            # loosened for mid-day
+        # Only filter out truly dead volume — let screener_score handle ranking
+        if d["rvol"] < 0.5:
+            counts["rvol"] += 1
+            continue
+        counts["passed"] += 1
         score = screener_score(d)
         filtered.append({
             "symbol": sym,
@@ -44,24 +49,30 @@ def run_screener() -> list:
             "screener_score": round(score, 4),
         })
 
+    logger.info(f"Filter results: {counts}")
     filtered.sort(key=lambda x: x["screener_score"], reverse=True)
     top = filtered[:15]
 
     logger.info(f"Top {len(top)} tickers:")
     for i, t in enumerate(top, 1):
-        logger.info(f"  {i:2d}. {t['symbol']:<6} ${t['price']:>7.2f}  Gap:{t['gap_pct']:+.1f}%  RVOL:{t['rvol']:.1f}x  Score:{t['screener_score']:.3f}")
+        logger.info(
+            f"  {i:2d}. {t['symbol']:<6} ${t['price']:>7.2f}  "
+            f"Gap:{t['gap_pct']:+.1f}%  RVOL:{t['rvol']:.1f}x  "
+            f"Score:{t['screener_score']:.3f}"
+        )
     return top
 
 
 def save_watchlist(tickers: list) -> None:
+    now_mt = datetime.now(MT).strftime("%Y-%m-%d %H:%M MT")
     output = {
         "generated_at": datetime.utcnow().isoformat() + "Z",
-        "generated_at_mt": datetime.now().strftime("%Y-%m-%d %H:%M MT"),
+        "generated_at_mt": now_mt,
         "count": len(tickers),
         "tickers": tickers,
     }
     WATCHLIST_PATH.write_text(json.dumps(output, indent=2))
-    logger.info(f"Watchlist saved → {WATCHLIST_PATH}")
+    logger.info(f"Watchlist saved → {WATCHLIST_PATH} at {now_mt}")
 
 
 if __name__ == "__main__":

@@ -40,12 +40,12 @@ def run_monitor():
     logger.info(f"Market: {status} | {now_mt}")
 
     if status not in ("OPEN", "PRE-MARKET"):
-        _write([], status, now_mt)
+        _write({}, status, now_mt)
         return
 
     symbols = load_watchlist()
     if not symbols:
-        _write([], status, now_mt)
+        _write({}, status, now_mt)
         return
 
     existing = load_existing_signals()

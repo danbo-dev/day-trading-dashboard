@@ -49,7 +49,10 @@ def run_monitor():
         return
 
     existing = load_existing_signals()
-    prev_strong = {s for s, d in existing.get("signals", {}).items() if d.get("best_score", 0) >= SIGNAL_STRONG}
+    signals_data = existing.get("signals", {})
+    if isinstance(signals_data, list):
+        signals_data = {}
+    prev_strong = {s for s, d in signals_data.items() if d.get("best_score", 0) >= SIGNAL_STRONG}
 
     signals, new_strong = {}, []
     for sym in symbols:

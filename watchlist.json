@@ -1,34 +1,25 @@
 {
-  "generated_at": "2026-03-31T14:56:43.261447Z",
-  "generated_at_mt": "2026-03-31 08:56 MT",
-  "count": 3,
+  "generated_at": "2026-04-01T14:27:44.731368Z",
+  "generated_at_mt": "2026-04-01 08:27 MT",
+  "count": 2,
   "tickers": [
     {
+      "symbol": "NKE",
+      "price": 45.22,
+      "gap_pct": -11.86,
+      "rvol": 2.34,
+      "atr": 1.82,
+      "avg_volume": 16637510,
+      "screener_score": 0.7746
+    },
+    {
       "symbol": "MRVL",
-      "price": 93.46,
-      "gap_pct": 9.3,
-      "rvol": 0.87,
-      "atr": 5.11,
-      "avg_volume": 23748255,
-      "screener_score": 0.6794
-    },
-    {
-      "symbol": "SNOW",
-      "price": 147.92,
-      "gap_pct": -2.87,
-      "rvol": 0.66,
-      "atr": 7.92,
-      "avg_volume": 4659545,
-      "screener_score": 0.3755
-    },
-    {
-      "symbol": "ARM",
-      "price": 143.82,
-      "gap_pct": 2.15,
-      "rvol": 0.51,
-      "atr": 9.37,
-      "avg_volume": 7246050,
-      "screener_score": 0.3322
+      "price": 107.1,
+      "gap_pct": 1.7,
+      "rvol": 0.59,
+      "atr": 5.66,
+      "avg_volume": 25511250,
+      "screener_score": 0.3177
     }
   ]
 }

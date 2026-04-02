@@ -1,16 +1,25 @@
 {
-  "generated_at": "2026-04-02T14:21:22.650755Z",
-  "generated_at_mt": "2026-04-02 08:21 MT",
-  "count": 1,
+  "generated_at": "2026-04-02T14:50:20.334311Z",
+  "generated_at_mt": "2026-04-02 08:50 MT",
+  "count": 2,
   "tickers": [
+    {
+      "symbol": "INTC",
+      "price": 49.44,
+      "gap_pct": -4.13,
+      "rvol": 0.64,
+      "atr": 2.9,
+      "avg_volume": 88543000,
+      "screener_score": 0.4305
+    },
     {
       "symbol": "NKE",
       "price": 43.53,
       "gap_pct": -1.95,
-      "rvol": 0.69,
+      "rvol": 0.97,
       "atr": 1.89,
       "avg_volume": 21628715,
-      "screener_score": 0.3098
+      "screener_score": 0.3295
     }
   ]
 }

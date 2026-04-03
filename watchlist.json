@@ -1,25 +1,142 @@
 {
-  "generated_at": "2026-04-02T14:50:20.334311Z",
-  "generated_at_mt": "2026-04-02 08:50 MT",
-  "count": 2,
+  "generated_at": "2026-04-03T14:01:57.160365Z",
+  "generated_at_mt": "2026-04-03 08:01 MT",
+  "count": 15,
   "tickers": [
     {
       "symbol": "INTC",
-      "price": 49.44,
-      "gap_pct": -4.13,
-      "rvol": 0.64,
+      "price": 50.38,
+      "gap_pct": -4.1,
+      "rvol": 1.32,
       "atr": 2.9,
-      "avg_volume": 88543000,
-      "screener_score": 0.4305
+      "avg_volume": 88557745,
+      "screener_score": 0.477
     },
     {
       "symbol": "NKE",
-      "price": 43.53,
+      "price": 44.19,
       "gap_pct": -1.95,
-      "rvol": 0.97,
+      "rvol": 2.92,
       "atr": 1.89,
-      "avg_volume": 21628715,
-      "screener_score": 0.3295
+      "avg_volume": 21644755,
+      "screener_score": 0.4629
+    },
+    {
+      "symbol": "MRVL",
+      "price": 107.11,
+      "gap_pct": -4.13,
+      "rvol": 0.88,
+      "atr": 5.84,
+      "avg_volume": 26992735,
+      "screener_score": 0.4473
+    },
+    {
+      "symbol": "ARM",
+      "price": 149.11,
+      "gap_pct": -3.42,
+      "rvol": 1.05,
+      "atr": 10.22,
+      "avg_volume": 7759135,
+      "screener_score": 0.4275
+    },
+    {
+      "symbol": "SHOP",
+      "price": 118.25,
+      "gap_pct": -3.53,
+      "rvol": 0.83,
+      "atr": 5.76,
+      "avg_volume": 8524090,
+      "screener_score": 0.4117
+    },
+    {
+      "symbol": "MRNA",
+      "price": 49.2,
+      "gap_pct": -3.77,
+      "rvol": 0.59,
+      "atr": 2.77,
+      "avg_volume": 7802570,
+      "screener_score": 0.411
+    },
+    {
+      "symbol": "MSTR",
+      "price": 119.83,
+      "gap_pct": -2.43,
+      "rvol": 0.89,
+      "atr": 7.28,
+      "avg_volume": 19664840,
+      "screener_score": 0.3718
+    },
+    {
+      "symbol": "NOW",
+      "price": 102.0,
+      "gap_pct": -2.16,
+      "rvol": 1.0,
+      "atr": 4.72,
+      "avg_volume": 16547415,
+      "screener_score": 0.3528
+    },
+    {
+      "symbol": "SMCI",
+      "price": 23.22,
+      "gap_pct": -2.35,
+      "rvol": 0.65,
+      "atr": 2.26,
+      "avg_volume": 46926375,
+      "screener_score": 0.3513
+    },
+    {
+      "symbol": "PLTR",
+      "price": 148.46,
+      "gap_pct": -2.05,
+      "rvol": 0.68,
+      "atr": 6.98,
+      "avg_volume": 44438110,
+      "screener_score": 0.3281
+    },
+    {
+      "symbol": "DDOG",
+      "price": 120.36,
+      "gap_pct": -1.17,
+      "rvol": 0.77,
+      "atr": 6.52,
+      "avg_volume": 4334885,
+      "screener_score": 0.3063
+    },
+    {
+      "symbol": "GM",
+      "price": 72.54,
+      "gap_pct": -2.27,
+      "rvol": 1.05,
+      "atr": 2.16,
+      "avg_volume": 7818085,
+      "screener_score": 0.2944
+    },
+    {
+      "symbol": "C",
+      "price": 115.25,
+      "gap_pct": -2.58,
+      "rvol": 0.61,
+      "atr": 3.64,
+      "avg_volume": 16189315,
+      "screener_score": 0.2852
+    },
+    {
+      "symbol": "ABNB",
+      "price": 124.95,
+      "gap_pct": -1.91,
+      "rvol": 0.84,
+      "atr": 4.22,
+      "avg_volume": 3673155,
+      "screener_score": 0.2801
+    },
+    {
+      "symbol": "CMG",
+      "price": 33.16,
+      "gap_pct": -1.62,
+      "rvol": 0.75,
+      "atr": 1.15,
+      "avg_volume": 16807785,
+      "screener_score": 0.2645
     }
   ]
 }

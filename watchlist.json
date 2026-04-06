@@ -1,6 +1,43 @@
 {
-  "generated_at": "2026-04-06T14:41:50.033198Z",
-  "generated_at_mt": "2026-04-06 08:41 MT",
-  "count": 0,
-  "tickers": []
+  "generated_at": "2026-04-06T16:34:29.121213Z",
+  "generated_at_mt": "2026-04-06 10:34 MT",
+  "count": 4,
+  "tickers": [
+    {
+      "symbol": "INTC",
+      "price": 50.31,
+      "gap_pct": 0.99,
+      "rvol": 0.56,
+      "atr": 2.81,
+      "avg_volume": 90502985,
+      "screener_score": 0.2838
+    },
+    {
+      "symbol": "NFLX",
+      "price": 98.64,
+      "gap_pct": 2.4,
+      "rvol": 0.56,
+      "atr": 2.95,
+      "avg_volume": 38550775,
+      "screener_score": 0.2668
+    },
+    {
+      "symbol": "SNOW",
+      "price": 149.08,
+      "gap_pct": -0.07,
+      "rvol": 0.55,
+      "atr": 7.88,
+      "avg_volume": 4637755,
+      "screener_score": 0.2412
+    },
+    {
+      "symbol": "NKE",
+      "price": 44.05,
+      "gap_pct": -0.07,
+      "rvol": 0.55,
+      "atr": 1.87,
+      "avg_volume": 23704875,
+      "screener_score": 0.2116
+    }
+  ]
 }

@@ -1,49 +1,56 @@
 {
-  "updated_at": "2026-04-07T16:01:07.044787+00:00",
-  "updated_at_mt": "2026-04-07 10:01 MT",
+  "updated_at": "2026-04-07T17:11:57.315579+00:00",
+  "updated_at_mt": "2026-04-07 11:11 MT",
   "market_status": "OPEN",
-  "new_strong_signals": [],
+  "new_strong_signals": [
+    {
+      "symbol": "INTC",
+      "score": 7.5,
+      "setup": "Launchpad",
+      "price": 52.73500061035156
+    }
+  ],
   "signal_count": 1,
   "signals": {
     "INTC": {
       "symbol": "INTC",
-      "price": 51.685001373291016,
-      "best_score": 2.5,
-      "best_setup": "None",
+      "price": 52.73500061035156,
+      "best_score": 7.5,
+      "best_setup": "Launchpad",
       "launchpad": {
-        "total": 2.5,
-        "signal_label": "WEAK",
-        "vwap_points": 0.0,
-        "pdh_points": 0.0,
+        "total": 7.5,
+        "signal_label": "STRONG",
+        "vwap_points": 2.5,
+        "pdh_points": 2.5,
         "ema_points": 1.0,
         "volume_points": 0.0,
         "ema_stack_points": 1.5,
         "rationale": [
-          "\u274c Below VWAP",
-          "\u274c Below PDH ($52.39)",
-          "\u2705 Above 9 EMA ($47.85)",
-          "\u2705 Above 20 EMA ($46.55)",
-          "\u26a0\ufe0f Elevated volume (RVOL 1.87x) \u2014 may be moving already",
+          "\u2705 Tight to VWAP (1.2% above) \u2014 ideal coil zone",
+          "\u2705 Sitting on PDH ($52.39) \u2014 resistance turned support",
+          "\u2705 Above 9 EMA ($48.06)",
+          "\u2705 Above 20 EMA ($46.65)",
+          "\u26a0\ufe0f Elevated volume (RVOL 1.60x) \u2014 may be moving already",
           "\u2705 Bullish EMA stack (9 > 20 > 50)"
         ]
       },
       "gap_and_go": {
-        "total": 1.5,
+        "total": 3.5,
         "signal_label": "WEAK",
         "gap_size_points": 1.0,
         "gap_above_pdh_points": 0.0,
         "pre_market_rvol_points": 0.0,
-        "vwap_hold_points": 0.0,
+        "vwap_hold_points": 2.0,
         "intraday_rvol_points": 0.5,
         "rationale": [
           "\u2796 Gap up 2.0% \u2014 modest",
           "\u274c Did not open above PDH ($52.39)",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
-          "\u274c Below VWAP \u2014 gap may be fading",
-          "\u2796 Intraday RVOL 1.9x"
+          "\u2705 Holding above VWAP ($52.09) \u2014 gap defending",
+          "\u2796 Intraday RVOL 1.6x"
         ]
       },
-      "snapshot_timestamp": "16:01:07 UTC"
+      "snapshot_timestamp": "17:11:57 UTC"
     }
   }
 }

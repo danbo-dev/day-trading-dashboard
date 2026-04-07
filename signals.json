@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-04-07T18:08:42.597142+00:00",
-  "updated_at_mt": "2026-04-07 12:08 MT",
+  "updated_at": "2026-04-07T19:21:14.345516+00:00",
+  "updated_at_mt": "2026-04-07 13:21 MT",
   "market_status": "OPEN",
   "new_strong_signals": [],
   "signal_count": 1,
   "signals": {
     "INTC": {
       "symbol": "INTC",
-      "price": 52.224998474121094,
+      "price": 52.35749816894531,
       "best_score": 5.5,
       "best_setup": "Launchpad",
       "launchpad": {
@@ -19,11 +19,11 @@
         "volume_points": 0.5,
         "ema_stack_points": 1.5,
         "rationale": [
-          "\u2705 Tight to VWAP (0.2% above) \u2014 ideal coil zone",
+          "\u2705 Tight to VWAP (0.4% above) \u2014 ideal coil zone",
           "\u274c Below PDH ($52.39)",
-          "\u2705 Above 9 EMA ($47.96)",
-          "\u2705 Above 20 EMA ($46.60)",
-          "\u2796 Normal volume (RVOL 1.41x)",
+          "\u2705 Above 9 EMA ($47.98)",
+          "\u2705 Above 20 EMA ($46.62)",
+          "\u2796 Normal volume (RVOL 1.24x)",
           "\u2705 Bullish EMA stack (9 > 20 > 50)"
         ]
       },
@@ -36,14 +36,14 @@
         "vwap_hold_points": 2.0,
         "intraday_rvol_points": 0.0,
         "rationale": [
-          "\u2796 Gap up 2.0% \u2014 modest",
+          "\u2796 Gap up 1.9% \u2014 modest",
           "\u274c Did not open above PDH ($52.39)",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
-          "\u2705 Holding above VWAP ($52.13) \u2014 gap defending",
-          "\u274c Intraday RVOL 1.4x \u2014 weak follow-through"
+          "\u2705 Holding above VWAP ($52.12) \u2014 gap defending",
+          "\u274c Intraday RVOL 1.2x \u2014 weak follow-through"
         ]
       },
-      "snapshot_timestamp": "18:08:42 UTC"
+      "snapshot_timestamp": "19:21:14 UTC"
     }
   }
 }

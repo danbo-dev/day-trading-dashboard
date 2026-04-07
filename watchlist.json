@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-04-07T15:00:53.133181Z",
-  "generated_at_mt": "2026-04-07 09:00 MT",
+  "generated_at": "2026-04-07T15:02:43.288541Z",
+  "generated_at_mt": "2026-04-07 09:02 MT",
   "count": 1,
   "tickers": [
     {
       "symbol": "INTC",
-      "price": 51.83,
+      "price": 51.72,
       "gap_pct": 2.22,
-      "rvol": 0.56,
+      "rvol": 0.57,
       "atr": 2.86,
       "avg_volume": 90758645,
-      "screener_score": 0.3389
+      "screener_score": 0.3394
     }
   ]
 }

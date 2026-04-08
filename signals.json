@@ -1,20 +1,13 @@
 {
-  "updated_at": "2026-04-08T18:42:00.574620+00:00",
-  "updated_at_mt": "2026-04-08 12:41 MT",
+  "updated_at": "2026-04-08T19:49:25.408598+00:00",
+  "updated_at_mt": "2026-04-08 13:49 MT",
   "market_status": "OPEN",
-  "new_strong_signals": [
-    {
-      "symbol": "INTC",
-      "score": 7.5,
-      "setup": "Gap & Go",
-      "price": 58.369998931884766
-    }
-  ],
+  "new_strong_signals": [],
   "signal_count": 3,
   "signals": {
     "INTC": {
       "symbol": "INTC",
-      "price": 58.369998931884766,
+      "price": 58.58000183105469,
       "best_score": 7.5,
       "best_setup": "Gap & Go",
       "launchpad": {
@@ -26,11 +19,11 @@
         "volume_points": 0.0,
         "ema_stack_points": 1.5,
         "rationale": [
-          "\u2705 Above VWAP (1.7%)",
-          "\u26a0\ufe0f Extended 9.6% above PDH",
-          "\u2705 Above 9 EMA ($50.15)",
-          "\u2705 Above 20 EMA ($47.78)",
-          "\u26a0\ufe0f Elevated volume (RVOL 1.82x) \u2014 may be moving already",
+          "\u2705 Above VWAP (1.8%)",
+          "\u26a0\ufe0f Extended 10.0% above PDH",
+          "\u2705 Above 9 EMA ($50.19)",
+          "\u2705 Above 20 EMA ($47.80)",
+          "\u26a0\ufe0f Elevated volume (RVOL 1.75x) \u2014 may be moving already",
           "\u2705 Bullish EMA stack (9 > 20 > 50)"
         ]
       },
@@ -46,15 +39,15 @@
           "\u2705 Gap up 4.5% \u2014 strong catalyst signal",
           "\u2705 Opened above PDH ($53.27) \u2014 prior resistance cleared",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
-          "\u2705 Holding above VWAP ($57.40) \u2014 gap defending",
-          "\u2796 Intraday RVOL 1.8x"
+          "\u2705 Holding above VWAP ($57.53) \u2014 gap defending",
+          "\u2796 Intraday RVOL 1.7x"
         ]
       },
-      "snapshot_timestamp": "18:41:59 UTC"
+      "snapshot_timestamp": "19:49:24 UTC"
     },
     "MRVL": {
       "symbol": "MRVL",
-      "price": 115.01000213623047,
+      "price": 114.28009796142578,
       "best_score": 7.0,
       "best_setup": "Gap & Go",
       "launchpad": {
@@ -66,11 +59,11 @@
         "volume_points": 0.5,
         "ema_stack_points": 1.5,
         "rationale": [
-          "\u2705 Tight to VWAP (1.2% above) \u2014 ideal coil zone",
-          "\u26a0\ufe0f Extended 4.4% above PDH",
-          "\u2705 Above 9 EMA ($104.83)",
-          "\u2705 Above 20 EMA ($98.06)",
-          "\u2796 Normal volume (RVOL 1.09x)",
+          "\u2705 Tight to VWAP (0.5% above) \u2014 ideal coil zone",
+          "\u26a0\ufe0f Extended 3.8% above PDH",
+          "\u2705 Above 9 EMA ($104.68)",
+          "\u2705 Above 20 EMA ($97.99)",
+          "\u2796 Normal volume (RVOL 1.06x)",
           "\u2705 Bullish EMA stack (9 > 20 > 50)"
         ]
       },
@@ -86,15 +79,15 @@
           "\u2705 Gap up 4.2% \u2014 strong catalyst signal",
           "\u2705 Opened above PDH ($110.12) \u2014 prior resistance cleared",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
-          "\u2705 Holding above VWAP ($113.62) \u2014 gap defending",
+          "\u2705 Holding above VWAP ($113.71) \u2014 gap defending",
           "\u274c Intraday RVOL 1.1x \u2014 weak follow-through"
         ]
       },
-      "snapshot_timestamp": "18:42:00 UTC"
+      "snapshot_timestamp": "19:49:25 UTC"
     },
     "PLTR": {
       "symbol": "PLTR",
-      "price": 142.2899932861328,
+      "price": 140.52499389648438,
       "best_score": 4.0,
       "best_setup": "None",
       "launchpad": {
@@ -108,9 +101,9 @@
         "rationale": [
           "\u274c Below VWAP",
           "\u274c Below PDH ($150.27)",
-          "\u274c Below 9 EMA ($147.07)",
-          "\u274c Below 20 EMA ($148.16)",
-          "\u2796 Normal volume (RVOL 1.42x)",
+          "\u274c Below 9 EMA ($146.72)",
+          "\u274c Below 20 EMA ($147.99)",
+          "\u2796 Normal volume (RVOL 1.44x)",
           "\u274c EMAs not in bullish alignment"
         ]
       },
@@ -130,7 +123,7 @@
           "\u274c Intraday RVOL 1.4x \u2014 weak follow-through"
         ]
       },
-      "snapshot_timestamp": "18:42:00 UTC"
+      "snapshot_timestamp": "19:49:25 UTC"
     }
   }
 }

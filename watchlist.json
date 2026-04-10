@@ -1,61 +1,43 @@
 {
-  "generated_at": "2026-04-09T15:17:06.447518Z",
-  "generated_at_mt": "2026-04-09 09:17 MT",
-  "count": 6,
+  "generated_at": "2026-04-10T14:16:22.273615Z",
+  "generated_at_mt": "2026-04-10 08:16 MT",
+  "count": 4,
   "tickers": [
     {
-      "symbol": "MRVL",
-      "price": 121.55,
-      "gap_pct": 4.15,
-      "rvol": 0.67,
-      "atr": 6.31,
-      "avg_volume": 21826745,
-      "screener_score": 0.4339
-    },
-    {
-      "symbol": "ZS",
-      "price": 126.25,
-      "gap_pct": -3.46,
-      "rvol": 0.99,
-      "atr": 8.17,
-      "avg_volume": 2453390,
-      "screener_score": 0.4248
-    },
-    {
       "symbol": "PLTR",
-      "price": 131.13,
-      "gap_pct": -1.03,
-      "rvol": 0.99,
-      "atr": 8.47,
-      "avg_volume": 40838890,
-      "screener_score": 0.3154
+      "price": 124.05,
+      "gap_pct": -1.59,
+      "rvol": 0.65,
+      "atr": 8.56,
+      "avg_volume": 43755105,
+      "screener_score": 0.317
     },
     {
       "symbol": "NOW",
-      "price": 91.01,
+      "price": 84.2,
       "gap_pct": -1.0,
-      "rvol": 0.93,
-      "atr": 5.11,
-      "avg_volume": 14685990,
-      "screener_score": 0.3097
-    },
-    {
-      "symbol": "INTC",
-      "price": 60.79,
-      "gap_pct": -0.87,
-      "rvol": 0.72,
-      "atr": 3.18,
-      "avg_volume": 98040900,
-      "screener_score": 0.2898
+      "rvol": 0.87,
+      "atr": 5.43,
+      "avg_volume": 16054895,
+      "screener_score": 0.3059
     },
     {
       "symbol": "SNOW",
-      "price": 138.75,
-      "gap_pct": 0.24,
-      "rvol": 0.89,
-      "atr": 8.84,
-      "avg_volume": 4694415,
-      "screener_score": 0.2731
+      "price": 124.12,
+      "gap_pct": 0.2,
+      "rvol": 0.93,
+      "atr": 9.45,
+      "avg_volume": 5292985,
+      "screener_score": 0.2744
+    },
+    {
+      "symbol": "ZS",
+      "price": 115.67,
+      "gap_pct": 0.35,
+      "rvol": 0.56,
+      "atr": 8.59,
+      "avg_volume": 2694075,
+      "screener_score": 0.255
     }
   ]
 }

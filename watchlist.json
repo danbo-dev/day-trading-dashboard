@@ -1,43 +1,52 @@
 {
-  "generated_at": "2026-04-10T14:16:22.273615Z",
-  "generated_at_mt": "2026-04-10 08:16 MT",
-  "count": 4,
+  "generated_at": "2026-04-10T14:43:21.177328Z",
+  "generated_at_mt": "2026-04-10 08:43 MT",
+  "count": 5,
   "tickers": [
     {
+      "symbol": "MRVL",
+      "price": 126.55,
+      "gap_pct": 3.11,
+      "rvol": 0.58,
+      "atr": 6.61,
+      "avg_volume": 22540520,
+      "screener_score": 0.3808
+    },
+    {
       "symbol": "PLTR",
-      "price": 124.05,
+      "price": 127.29,
       "gap_pct": -1.59,
-      "rvol": 0.65,
+      "rvol": 1.1,
       "atr": 8.56,
       "avg_volume": 43755105,
-      "screener_score": 0.317
+      "screener_score": 0.3487
     },
     {
       "symbol": "NOW",
-      "price": 84.2,
+      "price": 83.57,
       "gap_pct": -1.0,
-      "rvol": 0.87,
+      "rvol": 1.17,
       "atr": 5.43,
       "avg_volume": 16054895,
-      "screener_score": 0.3059
+      "screener_score": 0.327
     },
     {
       "symbol": "SNOW",
-      "price": 124.12,
+      "price": 123.06,
       "gap_pct": 0.2,
-      "rvol": 0.93,
+      "rvol": 1.31,
       "atr": 9.45,
       "avg_volume": 5292985,
-      "screener_score": 0.2744
+      "screener_score": 0.3009
     },
     {
       "symbol": "ZS",
-      "price": 115.67,
+      "price": 115.11,
       "gap_pct": 0.35,
-      "rvol": 0.56,
+      "rvol": 0.8,
       "atr": 8.59,
       "avg_volume": 2694075,
-      "screener_score": 0.255
+      "screener_score": 0.2716
     }
   ]
 }

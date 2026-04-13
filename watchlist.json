@@ -1,52 +1,52 @@
 {
-  "generated_at": "2026-04-10T14:43:21.177328Z",
-  "generated_at_mt": "2026-04-10 08:43 MT",
+  "generated_at": "2026-04-13T14:47:28.810727Z",
+  "generated_at_mt": "2026-04-13 08:47 MT",
   "count": 5,
   "tickers": [
     {
-      "symbol": "MRVL",
-      "price": 126.55,
-      "gap_pct": 3.11,
-      "rvol": 0.58,
-      "atr": 6.61,
-      "avg_volume": 22540520,
-      "screener_score": 0.3808
+      "symbol": "NOW",
+      "price": 87.25,
+      "gap_pct": 2.13,
+      "rvol": 0.56,
+      "atr": 5.7,
+      "avg_volume": 18078910,
+      "screener_score": 0.3351
     },
     {
       "symbol": "PLTR",
-      "price": 127.29,
-      "gap_pct": -1.59,
-      "rvol": 1.1,
-      "atr": 8.56,
-      "avg_volume": 43755105,
-      "screener_score": 0.3487
+      "price": 132.25,
+      "gap_pct": 1.69,
+      "rvol": 0.51,
+      "atr": 8.16,
+      "avg_volume": 46865790,
+      "screener_score": 0.312
     },
     {
-      "symbol": "NOW",
-      "price": 83.57,
-      "gap_pct": -1.0,
-      "rvol": 1.17,
-      "atr": 5.43,
-      "avg_volume": 16054895,
-      "screener_score": 0.327
+      "symbol": "MRVL",
+      "price": 131.67,
+      "gap_pct": 1.15,
+      "rvol": 0.6,
+      "atr": 6.82,
+      "avg_volume": 23756675,
+      "screener_score": 0.2939
     },
     {
       "symbol": "SNOW",
-      "price": 123.06,
-      "gap_pct": 0.2,
-      "rvol": 1.31,
-      "atr": 9.45,
-      "avg_volume": 5292985,
-      "screener_score": 0.3009
+      "price": 126.86,
+      "gap_pct": 0.74,
+      "rvol": 0.63,
+      "atr": 9.44,
+      "avg_volume": 6264900,
+      "screener_score": 0.2774
     },
     {
-      "symbol": "ZS",
-      "price": 115.11,
-      "gap_pct": 0.35,
-      "rvol": 0.8,
-      "atr": 8.59,
-      "avg_volume": 2694075,
-      "screener_score": 0.2716
+      "symbol": "ORCL",
+      "price": 149.78,
+      "gap_pct": 1.22,
+      "rvol": 0.55,
+      "atr": 6.31,
+      "avg_volume": 22026175,
+      "screener_score": 0.2616
     }
   ]
 }

@@ -1,52 +1,52 @@
 {
-  "generated_at": "2026-04-13T14:47:28.810727Z",
-  "generated_at_mt": "2026-04-13 08:47 MT",
+  "generated_at": "2026-04-13T15:12:05.949622Z",
+  "generated_at_mt": "2026-04-13 09:12 MT",
   "count": 5,
   "tickers": [
     {
       "symbol": "NOW",
-      "price": 87.25,
+      "price": 88.14,
       "gap_pct": 2.13,
-      "rvol": 0.56,
-      "atr": 5.7,
+      "rvol": 0.64,
+      "atr": 5.71,
       "avg_volume": 18078910,
-      "screener_score": 0.3351
+      "screener_score": 0.3409
     },
     {
       "symbol": "PLTR",
-      "price": 132.25,
+      "price": 133.3,
       "gap_pct": 1.69,
-      "rvol": 0.51,
-      "atr": 8.16,
+      "rvol": 0.61,
+      "atr": 8.24,
       "avg_volume": 46865790,
-      "screener_score": 0.312
+      "screener_score": 0.3191
     },
     {
       "symbol": "MRVL",
-      "price": 131.67,
+      "price": 131.54,
       "gap_pct": 1.15,
-      "rvol": 0.6,
+      "rvol": 0.66,
       "atr": 6.82,
       "avg_volume": 23756675,
-      "screener_score": 0.2939
+      "screener_score": 0.298
     },
     {
       "symbol": "SNOW",
-      "price": 126.86,
+      "price": 128.84,
       "gap_pct": 0.74,
-      "rvol": 0.63,
-      "atr": 9.44,
+      "rvol": 0.77,
+      "atr": 9.58,
       "avg_volume": 6264900,
-      "screener_score": 0.2774
+      "screener_score": 0.2872
     },
     {
       "symbol": "ORCL",
-      "price": 149.78,
+      "price": 149.43,
       "gap_pct": 1.22,
-      "rvol": 0.55,
-      "atr": 6.31,
+      "rvol": 0.73,
+      "atr": 6.39,
       "avg_volume": 22026175,
-      "screener_score": 0.2616
+      "screener_score": 0.2767
     }
   ]
 }

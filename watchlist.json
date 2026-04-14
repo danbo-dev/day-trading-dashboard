@@ -1,52 +1,25 @@
 {
-  "generated_at": "2026-04-13T15:12:05.949622Z",
-  "generated_at_mt": "2026-04-13 09:12 MT",
-  "count": 5,
+  "generated_at": "2026-04-14T14:50:14.556988Z",
+  "generated_at_mt": "2026-04-14 08:50 MT",
+  "count": 2,
   "tickers": [
     {
-      "symbol": "NOW",
-      "price": 88.14,
-      "gap_pct": 2.13,
-      "rvol": 0.64,
-      "atr": 5.71,
-      "avg_volume": 18078910,
-      "screener_score": 0.3409
-    },
-    {
-      "symbol": "PLTR",
-      "price": 133.3,
-      "gap_pct": 1.69,
-      "rvol": 0.61,
-      "atr": 8.24,
-      "avg_volume": 46865790,
-      "screener_score": 0.3191
-    },
-    {
       "symbol": "MRVL",
-      "price": 131.54,
-      "gap_pct": 1.15,
-      "rvol": 0.66,
-      "atr": 6.82,
-      "avg_volume": 23756675,
-      "screener_score": 0.298
+      "price": 133.16,
+      "gap_pct": 3.53,
+      "rvol": 0.55,
+      "atr": 6.94,
+      "avg_volume": 24613300,
+      "screener_score": 0.3977
     },
     {
-      "symbol": "SNOW",
-      "price": 128.84,
-      "gap_pct": 0.74,
-      "rvol": 0.77,
-      "atr": 9.58,
-      "avg_volume": 6264900,
-      "screener_score": 0.2872
-    },
-    {
-      "symbol": "ORCL",
-      "price": 149.43,
-      "gap_pct": 1.22,
-      "rvol": 0.73,
-      "atr": 6.39,
-      "avg_volume": 22026175,
-      "screener_score": 0.2767
+      "symbol": "WFC",
+      "price": 81.53,
+      "gap_pct": -4.18,
+      "rvol": 0.89,
+      "atr": 2.3,
+      "avg_volume": 15564645,
+      "screener_score": 0.3635
     }
   ]
 }

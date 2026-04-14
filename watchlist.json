@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-04-14T14:50:14.556988Z",
-  "generated_at_mt": "2026-04-14 08:50 MT",
+  "generated_at": "2026-04-14T15:09:25.336359Z",
+  "generated_at_mt": "2026-04-14 09:09 MT",
   "count": 2,
   "tickers": [
     {
       "symbol": "MRVL",
-      "price": 133.16,
+      "price": 133.11,
       "gap_pct": 3.53,
-      "rvol": 0.55,
+      "rvol": 0.62,
       "atr": 6.94,
       "avg_volume": 24613300,
-      "screener_score": 0.3977
+      "screener_score": 0.4021
     },
     {
       "symbol": "WFC",
-      "price": 81.53,
+      "price": 82.33,
       "gap_pct": -4.18,
-      "rvol": 0.89,
+      "rvol": 1.01,
       "atr": 2.3,
       "avg_volume": 15564645,
-      "screener_score": 0.3635
+      "screener_score": 0.3705
     }
   ]
 }

@@ -1,6 +1,16 @@
 {
-  "generated_at": "2026-04-15T14:31:43.936687Z",
-  "generated_at_mt": "2026-04-15 08:31 MT",
-  "count": 0,
-  "tickers": []
+  "generated_at": "2026-04-15T15:02:30.079353Z",
+  "generated_at_mt": "2026-04-15 09:02 MT",
+  "count": 1,
+  "tickers": [
+    {
+      "symbol": "BAC",
+      "price": 53.81,
+      "gap_pct": 1.69,
+      "rvol": 0.56,
+      "atr": 1.24,
+      "avg_volume": 37168325,
+      "screener_score": 0.2077
+    }
+  ]
 }

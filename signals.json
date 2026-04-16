@@ -1,8 +1,49 @@
 {
-  "updated_at": "2026-04-15T21:26:53.304823+00:00",
-  "updated_at_mt": "2026-04-15 15:26 MT",
-  "market_status": "AFTER-HOURS",
+  "updated_at": "2026-04-16T15:02:39.948724+00:00",
+  "updated_at_mt": "2026-04-16 09:02 MT",
+  "market_status": "OPEN",
   "new_strong_signals": [],
-  "signal_count": 0,
-  "signals": {}
+  "signal_count": 1,
+  "signals": {
+    "NOW": {
+      "symbol": "NOW",
+      "price": 96.16999816894531,
+      "best_score": 4.5,
+      "best_setup": "None",
+      "launchpad": {
+        "total": 2.0,
+        "signal_label": "WEAK",
+        "vwap_points": 0.0,
+        "pdh_points": 1.5,
+        "ema_points": 0.5,
+        "volume_points": 0.0,
+        "ema_stack_points": 0.0,
+        "rationale": [
+          "\u274c Below VWAP",
+          "\u2705 Above PDH by 1.4%",
+          "\u2705 Above 9 EMA ($94.19)",
+          "\u274c Below 20 EMA ($98.88)",
+          "\u26a0\ufe0f Elevated volume (RVOL 2.20x) \u2014 may be moving already",
+          "\u274c EMAs not in bullish alignment"
+        ]
+      },
+      "gap_and_go": {
+        "total": 4.5,
+        "signal_label": "WEAK",
+        "gap_size_points": 2.0,
+        "gap_above_pdh_points": 2.0,
+        "pre_market_rvol_points": 0.0,
+        "vwap_hold_points": 0.0,
+        "intraday_rvol_points": 0.5,
+        "rationale": [
+          "\u2705 Gap up 3.6%",
+          "\u2705 Opened above PDH ($94.83) \u2014 prior resistance cleared",
+          "\u274c Pre-market RVOL 0.0x \u2014 weak",
+          "\u274c Below VWAP \u2014 gap may be fading",
+          "\u2796 Intraday RVOL 2.2x"
+        ]
+      },
+      "snapshot_timestamp": "15:02:39 UTC"
+    }
+  }
 }

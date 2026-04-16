@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-04-15T15:02:30.079353Z",
-  "generated_at_mt": "2026-04-15 09:02 MT",
+  "generated_at": "2026-04-16T14:54:39.460095Z",
+  "generated_at_mt": "2026-04-16 08:54 MT",
   "count": 1,
   "tickers": [
     {
-      "symbol": "BAC",
-      "price": 53.81,
-      "gap_pct": 1.69,
-      "rvol": 0.56,
-      "atr": 1.24,
-      "avg_volume": 37168325,
-      "screener_score": 0.2077
+      "symbol": "NOW",
+      "price": 96.53,
+      "gap_pct": 3.63,
+      "rvol": 0.51,
+      "atr": 5.79,
+      "avg_volume": 20184475,
+      "screener_score": 0.3991
     }
   ]
 }

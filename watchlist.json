@@ -1,16 +1,25 @@
 {
-  "generated_at": "2026-04-16T14:54:39.460095Z",
-  "generated_at_mt": "2026-04-16 08:54 MT",
-  "count": 1,
+  "generated_at": "2026-04-16T15:22:02.069446Z",
+  "generated_at_mt": "2026-04-16 09:22 MT",
+  "count": 2,
   "tickers": [
     {
+      "symbol": "DDOG",
+      "price": 126.45,
+      "gap_pct": 6.05,
+      "rvol": 0.55,
+      "atr": 7.49,
+      "avg_volume": 4708965,
+      "screener_score": 0.5112
+    },
+    {
       "symbol": "NOW",
-      "price": 96.53,
+      "price": 96.42,
       "gap_pct": 3.63,
-      "rvol": 0.51,
+      "rvol": 0.56,
       "atr": 5.79,
       "avg_volume": 20184475,
-      "screener_score": 0.3991
+      "screener_score": 0.4027
     }
   ]
 }

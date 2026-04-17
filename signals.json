@@ -1,49 +1,49 @@
 {
-  "updated_at": "2026-04-17T16:31:13.089821+00:00",
-  "updated_at_mt": "2026-04-17 10:31 MT",
+  "updated_at": "2026-04-17T17:26:43.015228+00:00",
+  "updated_at_mt": "2026-04-17 11:26 MT",
   "market_status": "OPEN",
   "new_strong_signals": [],
   "signal_count": 1,
   "signals": {
     "NFLX": {
       "symbol": "NFLX",
-      "price": 98.13500213623047,
-      "best_score": 6.0,
-      "best_setup": "Gap & Go",
+      "price": 96.87000274658203,
+      "best_score": 4.0,
+      "best_setup": "None",
       "launchpad": {
-        "total": 4.0,
+        "total": 1.5,
         "signal_label": "WEAK",
-        "vwap_points": 2.5,
+        "vwap_points": 0.0,
         "pdh_points": 0.0,
         "ema_points": 0.0,
         "volume_points": 0.0,
         "ema_stack_points": 1.5,
         "rationale": [
-          "\u2705 Tight to VWAP (0.9% above) \u2014 ideal coil zone",
+          "\u274c Below VWAP",
           "\u274c Below PDH ($108.95)",
-          "\u274c Below 9 EMA ($102.43)",
-          "\u274c Below 20 EMA ($99.53)",
-          "\u26a0\ufe0f Elevated volume (RVOL 4.39x) \u2014 may be moving already",
+          "\u274c Below 9 EMA ($102.18)",
+          "\u274c Below 20 EMA ($99.41)",
+          "\u26a0\ufe0f Elevated volume (RVOL 3.78x) \u2014 may be moving already",
           "\u2705 Bullish EMA stack (9 > 20 > 50)"
         ]
       },
       "gap_and_go": {
-        "total": 6.0,
-        "signal_label": "MODERATE",
+        "total": 4.0,
+        "signal_label": "WEAK",
         "gap_size_points": 3.0,
         "gap_above_pdh_points": 0.0,
         "pre_market_rvol_points": 0.0,
-        "vwap_hold_points": 2.0,
+        "vwap_hold_points": 0.0,
         "intraday_rvol_points": 1.0,
         "rationale": [
           "\u2705 Gap down 10.6% \u2014 strong catalyst signal",
           "\u274c Did not open above PDH ($108.95)",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
-          "\u2705 Holding above VWAP ($97.24) \u2014 gap defending",
-          "\u2705 Intraday RVOL 4.4x \u2014 strong follow-through"
+          "\u274c Below VWAP \u2014 gap may be fading",
+          "\u2705 Intraday RVOL 3.8x \u2014 strong follow-through"
         ]
       },
-      "snapshot_timestamp": "16:31:13 UTC"
+      "snapshot_timestamp": "17:26:43 UTC"
     }
   }
 }

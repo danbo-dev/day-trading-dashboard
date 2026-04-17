@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-04-17T14:20:12.567215Z",
-  "generated_at_mt": "2026-04-17 08:20 MT",
+  "generated_at": "2026-04-17T14:50:57.919389Z",
+  "generated_at_mt": "2026-04-17 08:50 MT",
   "count": 1,
   "tickers": [
     {
       "symbol": "NFLX",
-      "price": 97.4,
+      "price": 98.01,
       "gap_pct": -10.59,
-      "rvol": 1.25,
+      "rvol": 1.5,
       "atr": 3.51,
       "avg_volume": 38723950,
-      "screener_score": 0.6816
+      "screener_score": 0.6988
     }
   ]
 }

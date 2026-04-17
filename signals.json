@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-04-17T17:26:43.015228+00:00",
-  "updated_at_mt": "2026-04-17 11:26 MT",
+  "updated_at": "2026-04-17T18:11:02.230125+00:00",
+  "updated_at_mt": "2026-04-17 12:11 MT",
   "market_status": "OPEN",
   "new_strong_signals": [],
   "signal_count": 1,
   "signals": {
     "NFLX": {
       "symbol": "NFLX",
-      "price": 96.87000274658203,
+      "price": 96.90630340576172,
       "best_score": 4.0,
       "best_setup": "None",
       "launchpad": {
@@ -21,9 +21,9 @@
         "rationale": [
           "\u274c Below VWAP",
           "\u274c Below PDH ($108.95)",
-          "\u274c Below 9 EMA ($102.18)",
-          "\u274c Below 20 EMA ($99.41)",
-          "\u26a0\ufe0f Elevated volume (RVOL 3.78x) \u2014 may be moving already",
+          "\u274c Below 9 EMA ($102.19)",
+          "\u274c Below 20 EMA ($99.42)",
+          "\u26a0\ufe0f Elevated volume (RVOL 3.38x) \u2014 may be moving already",
           "\u2705 Bullish EMA stack (9 > 20 > 50)"
         ]
       },
@@ -40,10 +40,10 @@
           "\u274c Did not open above PDH ($108.95)",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
           "\u274c Below VWAP \u2014 gap may be fading",
-          "\u2705 Intraday RVOL 3.8x \u2014 strong follow-through"
+          "\u2705 Intraday RVOL 3.4x \u2014 strong follow-through"
         ]
       },
-      "snapshot_timestamp": "17:26:43 UTC"
+      "snapshot_timestamp": "18:11:02 UTC"
     }
   }
 }

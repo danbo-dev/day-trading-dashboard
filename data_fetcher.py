@@ -138,7 +138,11 @@ def batch_daily_filter(symbols: list) -> list:
                         continue
 
                     price = float(df["Close"].iloc[-1])
-                    if price < 10 or price > 150:
+                    if price < 10 or price > 75:
+                        continue
+                    # ATR must be at least 1.5% of price (replaces flat $0.75 ATR floor)
+                    atr_pct_check = atr / price if price > 0 else 0
+                    if atr_pct_check < 0.015:
                         continue
 
                     avg_vol = int(df["Volume"].iloc[-21:-1].mean())

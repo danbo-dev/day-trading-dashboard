@@ -120,68 +120,84 @@ def calculate_atr(daily: pd.DataFrame, period: int = 14) -> float:
 
 def batch_daily_filter(symbols: list) -> list:
     """
-    Step 1 of two-step screener: fast daily-bar filter.
-    Downloads 30d daily bars for all symbols in batches.
-    Returns top 50 candidates ranked by ATR and avg volume.
-    These are candidates for the slower pre-market intraday pull.
+    Step 1: Fast daily-bar filter using individual yfinance downloads.
+    Returns top 50 candidates ranked by ATR/volume for pre-market pull.
     """
     candidates = []
-    batch_size = 50
+    
+    # Use yfinance download for all at once but parse differently
+    logger.info(f"Downloading daily data for {len(symbols)} symbols...")
+    try:
+        raw = yf.download(
+            symbols,
+            period="30d",
+            interval="1d",
+            group_by="ticker",
+            auto_adjust=True,
+            progress=False,
+            threads=True,
+            timeout=60,
+        )
+    except Exception as e:
+        logger.error(f"Batch download failed: {e}")
+        return []
 
-    for i in range(0, len(symbols), batch_size):
-        batch = symbols[i:i + batch_size]
+    logger.info("Parsing downloaded data...")
+    for sym in symbols:
         try:
-            raw = yf.download(
-                batch, period="30d", interval="1d",
-                group_by="ticker", auto_adjust=True,
-                progress=False, threads=True
-            )
-            for sym in batch:
-                try:
-                    df = raw[sym] if len(batch) > 1 and sym in raw.columns.get_level_values(0) \
-                        else (raw if len(batch) == 1 else pd.DataFrame())
-                    if df.empty or len(df) < 5:
-                        continue
+            # Handle both single and multi-ticker download formats
+            if len(symbols) == 1:
+                df = raw
+            else:
+                if sym not in raw.columns.get_level_values(0):
+                    continue
+                df = raw[sym].dropna(how="all")
 
-                    price = float(df["Close"].iloc[-1])
-                    if price < 10 or price > 75:
-                        continue
-                    # ATR must be at least 1.5% of price (replaces flat $0.75 ATR floor)
-                    atr_pct_check = atr / price if price > 0 else 0
-                    if atr_pct_check < 0.005:
-                        continue
+            if df is None or len(df) < 5:
+                continue
 
-                    avg_vol = int(df["Volume"].iloc[-21:-1].mean())
-                    if avg_vol < 1_000_000:
-                        continue
+            # Drop rows where Close is NaN
+            df = df[df["Close"].notna()]
+            if len(df) < 5:
+                continue
 
-                    h, l, c = df["High"], df["Low"], df["Close"].shift(1)
-                    tr = pd.concat([h - l, (h - c).abs(), (l - c).abs()], axis=1).max(axis=1)
-                    atr = float(tr.rolling(14).mean().iloc[-1])
+            price = float(df["Close"].iloc[-1])
+            if price < 10 or price > 75:
+                continue
 
-                    # Rank by ATR as % of price (volatility) + avg volume
-                    atr_pct = atr / price
-                    vol_score = min(avg_vol / 5_000_000, 1.0)
-                    rank_score = (atr_pct * 0.6) + (vol_score * 0.4)
+            avg_vol = float(df["Volume"].iloc[-21:-1].mean())
+            if avg_vol < 1_000_000:
+                continue
 
-                    candidates.append({
-                        "symbol": sym,
-                        "price": round(price, 2),
-                        "avg_volume": avg_vol,
-                        "atr": round(atr, 2),
-                        "atr_pct": round(atr_pct, 4),
-                        "rank_score": round(rank_score, 4),
-                        "prev_close": float(df["Close"].iloc[-2]),
-                    })
-                except Exception:
-                    pass
-        except Exception as e:
-            logger.warning(f"Batch {i // batch_size + 1} failed: {e}")
+            h = df["High"]
+            l = df["Low"]
+            c = df["Close"].shift(1)
+            tr = pd.concat([h - l, (h - c).abs(), (l - c).abs()], axis=1).max(axis=1)
+            atr = float(tr.rolling(14).mean().iloc[-1])
 
-        if i + batch_size < len(symbols):
-            time.sleep(0.3)
+            if pd.isna(atr):
+                continue
 
-    # Sort by rank score and return top 50
+            atr_pct = atr / price
+            if atr_pct < 0.005:
+                continue
+
+            vol_score = min(avg_vol / 5_000_000, 1.0)
+            rank_score = (atr_pct * 0.6) + (vol_score * 0.4)
+
+            candidates.append({
+                "symbol": sym,
+                "price": round(price, 2),
+                "avg_volume": int(avg_vol),
+                "atr": round(atr, 2),
+                "atr_pct": round(atr_pct, 4),
+                "rank_score": round(rank_score, 4),
+                "prev_close": float(df["Close"].iloc[-2]),
+            })
+
+        except Exception:
+            pass
+
     candidates.sort(key=lambda x: x["rank_score"], reverse=True)
     top50 = candidates[:50]
     logger.info(f"Daily filter: {len(candidates)} passed → top {len(top50)} selected for pre-market pull")

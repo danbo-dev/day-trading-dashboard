@@ -152,8 +152,6 @@ def batch_daily_filter(symbols: list) -> list:
                     h, l, c = df["High"], df["Low"], df["Close"].shift(1)
                     tr = pd.concat([h - l, (h - c).abs(), (l - c).abs()], axis=1).max(axis=1)
                     atr = float(tr.rolling(14).mean().iloc[-1])
-                    if atr < 0.75:
-                        continue
 
                     # Rank by ATR as % of price (volatility) + avg volume
                     atr_pct = atr / price

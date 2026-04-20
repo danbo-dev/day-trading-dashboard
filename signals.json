@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-04-20T14:55:34.568448+00:00",
-  "updated_at_mt": "2026-04-20 08:55 MT",
+  "updated_at": "2026-04-20T16:16:59.927909+00:00",
+  "updated_at_mt": "2026-04-20 10:16 MT",
   "market_status": "OPEN",
   "new_strong_signals": [],
-  "signal_count": 1,
+  "signal_count": 2,
   "signals": {
     "MRVL": {
       "symbol": "MRVL",
-      "price": 144.8300018310547,
-      "best_score": 6.0,
+      "price": 145.56500244140625,
+      "best_score": 5.5,
       "best_setup": "Gap & Go",
       "launchpad": {
         "total": 3.0,
@@ -20,30 +20,70 @@
         "ema_stack_points": 1.5,
         "rationale": [
           "\u274c Below VWAP",
-          "\u26a0\ufe0f Extended 3.5% above PDH",
-          "\u2705 Above 9 EMA ($131.07)",
-          "\u2705 Above 20 EMA ($118.21)",
-          "\u26a0\ufe0f Elevated volume (RVOL 3.04x) \u2014 may be moving already",
+          "\u26a0\ufe0f Extended 4.0% above PDH",
+          "\u2705 Above 9 EMA ($131.21)",
+          "\u2705 Above 20 EMA ($118.27)",
+          "\u26a0\ufe0f Elevated volume (RVOL 1.95x) \u2014 may be moving already",
           "\u2705 Bullish EMA stack (9 > 20 > 50)"
         ]
       },
       "gap_and_go": {
-        "total": 6.0,
+        "total": 5.5,
         "signal_label": "MODERATE",
         "gap_size_points": 3.0,
         "gap_above_pdh_points": 2.0,
         "pre_market_rvol_points": 0.0,
         "vwap_hold_points": 0.0,
-        "intraday_rvol_points": 1.0,
+        "intraday_rvol_points": 0.5,
         "rationale": [
           "\u2705 Gap up 5.6% \u2014 strong catalyst signal",
           "\u2705 Opened above PDH ($139.91) \u2014 prior resistance cleared",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
           "\u274c Below VWAP \u2014 gap may be fading",
-          "\u2705 Intraday RVOL 3.0x \u2014 strong follow-through"
+          "\u2796 Intraday RVOL 2.0x"
         ]
       },
-      "snapshot_timestamp": "14:55:34 UTC"
+      "snapshot_timestamp": "16:16:59 UTC"
+    },
+    "NFLX": {
+      "symbol": "NFLX",
+      "price": 93.86000061035156,
+      "best_score": 1.5,
+      "best_setup": "None",
+      "launchpad": {
+        "total": 1.5,
+        "signal_label": "WEAK",
+        "vwap_points": 0.0,
+        "pdh_points": 0.0,
+        "ema_points": 0.0,
+        "volume_points": 0.0,
+        "ema_stack_points": 1.5,
+        "rationale": [
+          "\u274c Below VWAP",
+          "\u274c Below PDH ($98.74)",
+          "\u274c Below 9 EMA ($100.59)",
+          "\u274c Below 20 EMA ($98.93)",
+          "\u26a0\ufe0f Elevated volume (RVOL 1.82x) \u2014 may be moving already",
+          "\u2705 Bullish EMA stack (9 > 20 > 50)"
+        ]
+      },
+      "gap_and_go": {
+        "total": 0.5,
+        "signal_label": "WEAK",
+        "gap_size_points": 0.0,
+        "gap_above_pdh_points": 0.0,
+        "pre_market_rvol_points": 0.0,
+        "vwap_hold_points": 0.0,
+        "intraday_rvol_points": 0.5,
+        "rationale": [
+          "\u274c Gap too small (0.2%)",
+          "\u274c Did not open above PDH ($98.74)",
+          "\u274c Pre-market RVOL 0.0x \u2014 weak",
+          "\u274c Below VWAP \u2014 gap may be fading",
+          "\u2796 Intraday RVOL 1.8x"
+        ]
+      },
+      "snapshot_timestamp": "16:16:59 UTC"
     }
   }
 }

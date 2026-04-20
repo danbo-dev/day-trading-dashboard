@@ -52,40 +52,46 @@ class TickerSnapshot:
 
 
 def get_universe() -> list:
+    # Primary: hardcoded ~200 liquid names (always works)
+    base = [
+        "AAPL","MSFT","NVDA","AMZN","GOOGL","GOOG","META","TSLA","AVGO","ORCL",
+        "NFLX","ADBE","QCOM","TXN","CRM","NOW","INTC","CSCO","IBM","HPQ",
+        "AMD","MU","AMAT","LRCX","KLAC","MRVL","SMCI","ARM","DELL","ACN",
+        "PLTR","PANW","CRWD","ZS","DDOG","NET","SNOW","SHOP","HUBS","WDAY",
+        "BILL","GTLB","PCTY","PAYC","VEEV","TEAM","MDB","CFLT","ZI","DOCU",
+        "JPM","GS","MS","BAC","WFC","C","AXP","V","MA","PYPL",
+        "COIN","HOOD","SQ","AFRM","UPST","SOFI","NU","SCHW","COF","AIG",
+        "UNH","LLY","ABBV","AMGN","PFE","MRK","JNJ","BMY","GILD","REGN",
+        "TMO","DHR","MRNA","BNTX","VRTX","BIIB","ILMN","IQV","ZBH","BSX",
+        "HD","COST","WMT","TGT","NKE","SBUX","MCD","CMG","YUM","DG",
+        "MELI","SE","BABA","ETSY","CHWY","W","RVLV","CPNG","EBAY","AMZN",
+        "XOM","CVX","COP","SLB","EOG","MPC","VLO","DVN","HAL","OXY",
+        "BA","CAT","HON","LMT","RTX","GE","UPS","FDX","DE","MMM",
+        "F","GM","RIVN","LCID","NIO","XPEV","LI","RACE","STLA","TM",
+        "NFLX","DIS","CMCSA","SPOT","RBLX","U","EA","TTWO","WBD","PARA",
+        "UBER","ABNB","BKNG","LYFT","DASH","EXPE","MAR","HLT","CCL","RCL",
+        "SNAP","PINS","RDDT","APP","TTD","MGNI","BZFD","SPRK","DV","IAS",
+        "MSTR","RIOT","MARA","CLSK","COIN","HOOD","SQ","PYPL","BLOCK","BITF",
+        "AMT","PLD","EQIX","CCI","SPG","O","VICI","WPC","NNN","STAG",
+        "SRPT","BLUE","SAGE","RARE","FOLD","ACAD","INCY","ALNY","BMRN","EXEL",
+    ]
+    universe = list(set(base))
+
+    # Supplement: iShares Russell 1000 ETF holdings CSV (same source as your EMA scanner)
     try:
-        sp500 = pd.read_html(
-            "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies",
-            flavor="lxml"
-        )[0]["Symbol"].tolist()
-        sp500 = [s.replace(".", "-") for s in sp500]
-        try:
-            ndx_tables = pd.read_html(
-                "https://en.wikipedia.org/wiki/Nasdaq-100",
-                flavor="lxml"
-            )
-            ndx = []
-            for t in ndx_tables:
-                if "Ticker" in t.columns:
-                    ndx = t["Ticker"].tolist()
-                    break
-        except Exception:
-            ndx = []
-        combined = list(set(sp500 + ndx))
-        logger.info(f"Universe: {len(combined)} tickers")
-        return combined
+        url = "https://www.ishares.com/us/products/239707/ishares-russell-1000-etf/1467271812596.ajax?fileType=csv&fileName=IWB_holdings&dataType=fund"
+        df = pd.read_csv(url, skiprows=9, header=0)
+        col = next((c for c in df.columns if "ticker" in c.lower()), None)
+        if col:
+            tickers = df[col].dropna().tolist()
+            tickers = [str(t).strip() for t in tickers if str(t).strip().isalpha() and len(str(t).strip()) <= 5]
+            universe = list(set(universe + tickers))
+            logger.info(f"iShares IWB supplemented universe to {len(universe)} tickers")
     except Exception as e:
-        logger.warning(f"Universe fetch failed ({e}), using fallback")
-        return [
-            "AAPL","MSFT","NVDA","AMZN","GOOGL","META","TSLA","AVGO","AMD","ORCL",
-            "NFLX","ADBE","QCOM","TXN","CRM","NOW","PLTR","PANW","CRWD","ZS",
-            "JPM","GS","MS","BAC","V","MA","UNH","LLY","ABBV","AMGN",
-            "XOM","CVX","COP","HD","COST","WMT","NKE","SBUX","MCD","CMG",
-            "BA","CAT","HON","LMT","RTX","GE","UPS","FDX","UBER","ABNB",
-            "SHOP","SNOW","DDOG","NET","COIN","MSTR","ARM","SMCI","MU","AMAT",
-            "LRCX","KLAC","MRVL","DELL","HPQ","IBM","CSCO","INTC","F","GM",
-            "PFE","MRK","JNJ","BMY","GILD","REGN","MRNA","ABBV","TMO","WFC",
-            "C","AXP","PYPL","BKNG","ABNB","UBER","LYFT","DASH","SNAP","PINS",
-        ]
+        logger.info(f"iShares fetch unavailable ({e}) — using hardcoded universe only")
+
+    logger.info(f"Final universe: {len(universe)} tickers")
+    return universe
 
 
 def calculate_vwap(intraday: pd.DataFrame) -> float:

@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-04-17T14:50:57.919389Z",
-  "generated_at_mt": "2026-04-17 08:50 MT",
+  "generated_at": "2026-04-20T14:49:14.147279Z",
+  "generated_at_mt": "2026-04-20 08:49 MT",
   "count": 1,
   "tickers": [
     {
-      "symbol": "NFLX",
-      "price": 98.01,
-      "gap_pct": -10.59,
-      "rvol": 1.5,
-      "atr": 3.51,
-      "avg_volume": 38723950,
-      "screener_score": 0.6988
+      "symbol": "MRVL",
+      "price": 145.58,
+      "gap_pct": 5.56,
+      "rvol": 0.64,
+      "atr": 7.11,
+      "avg_volume": 26977265,
+      "screener_score": 0.4901
     }
   ]
 }

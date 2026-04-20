@@ -148,7 +148,7 @@ def batch_daily_filter(symbols: list) -> list:
                         continue
                     # ATR must be at least 1.5% of price (replaces flat $0.75 ATR floor)
                     atr_pct_check = atr / price if price > 0 else 0
-                    if atr_pct_check < 0.010:
+                    if atr_pct_check < 0.005:
                         continue
 
                     avg_vol = int(df["Volume"].iloc[-21:-1].mean())

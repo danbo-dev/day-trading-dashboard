@@ -1,6 +1,6 @@
 """
 data_fetcher.py — All yfinance interactions for the day trading dashboard.
-Handles intraday, pre-market, daily OHLCV, EMAs, VWAP, ATR, PDH/PDL.
+Handles intraday data, pre-market data, daily OHLCV, EMAs, VWAP, ATR, PDH/PDL.
 """
 import yfinance as yf
 import pandas as pd
@@ -87,6 +87,7 @@ def get_universe() -> list:
             "C","AXP","PYPL","BKNG","ABNB","UBER","LYFT","DASH","SNAP","PINS",
         ]
 
+
 def calculate_vwap(intraday: pd.DataFrame) -> float:
     try:
         df = intraday.copy()
@@ -109,6 +110,174 @@ def calculate_atr(daily: pd.DataFrame, period: int = 14) -> float:
         return float(tr.rolling(period).mean().iloc[-1])
     except Exception:
         return float("nan")
+
+
+def batch_daily_filter(symbols: list) -> list:
+    """
+    Step 1 of two-step screener: fast daily-bar filter.
+    Downloads 30d daily bars for all symbols in batches.
+    Returns top 50 candidates ranked by ATR and avg volume.
+    These are candidates for the slower pre-market intraday pull.
+    """
+    candidates = []
+    batch_size = 50
+
+    for i in range(0, len(symbols), batch_size):
+        batch = symbols[i:i + batch_size]
+        try:
+            raw = yf.download(
+                batch, period="30d", interval="1d",
+                group_by="ticker", auto_adjust=True,
+                progress=False, threads=True
+            )
+            for sym in batch:
+                try:
+                    df = raw[sym] if len(batch) > 1 and sym in raw.columns.get_level_values(0) \
+                        else (raw if len(batch) == 1 else pd.DataFrame())
+                    if df.empty or len(df) < 5:
+                        continue
+
+                    price = float(df["Close"].iloc[-1])
+                    if price < 10 or price > 150:
+                        continue
+
+                    avg_vol = int(df["Volume"].iloc[-21:-1].mean())
+                    if avg_vol < 1_000_000:
+                        continue
+
+                    h, l, c = df["High"], df["Low"], df["Close"].shift(1)
+                    tr = pd.concat([h - l, (h - c).abs(), (l - c).abs()], axis=1).max(axis=1)
+                    atr = float(tr.rolling(14).mean().iloc[-1])
+                    if atr < 0.75:
+                        continue
+
+                    # Rank by ATR as % of price (volatility) + avg volume
+                    atr_pct = atr / price
+                    vol_score = min(avg_vol / 5_000_000, 1.0)
+                    rank_score = (atr_pct * 0.6) + (vol_score * 0.4)
+
+                    candidates.append({
+                        "symbol": sym,
+                        "price": round(price, 2),
+                        "avg_volume": avg_vol,
+                        "atr": round(atr, 2),
+                        "atr_pct": round(atr_pct, 4),
+                        "rank_score": round(rank_score, 4),
+                        "prev_close": float(df["Close"].iloc[-2]),
+                    })
+                except Exception:
+                    pass
+        except Exception as e:
+            logger.warning(f"Batch {i // batch_size + 1} failed: {e}")
+
+        if i + batch_size < len(symbols):
+            time.sleep(0.3)
+
+    # Sort by rank score and return top 50
+    candidates.sort(key=lambda x: x["rank_score"], reverse=True)
+    top50 = candidates[:50]
+    logger.info(f"Daily filter: {len(candidates)} passed → top {len(top50)} selected for pre-market pull")
+    return top50
+
+
+def get_premarket_data(candidates: list) -> dict:
+    """
+    Step 2 of two-step screener: pull real pre-market intraday data.
+    For each candidate, fetches 1-min bars with prepost=True to get
+    actual pre-market price and volume for today.
+    Returns dict of symbol -> enriched data.
+    """
+    results = {}
+    symbols = [c["symbol"] for c in candidates]
+    candidate_map = {c["symbol"]: c for c in candidates}
+
+    for sym in symbols:
+        try:
+            ticker = yf.Ticker(sym)
+            intraday = ticker.history(
+                period="1d", interval="1m",
+                prepost=True, auto_adjust=True
+            )
+
+            if intraday.empty:
+                # Fall back to daily data gap estimate
+                c = candidate_map[sym]
+                results[sym] = {**c, "gap_pct": 0.0, "rvol": 1.0,
+                                 "pre_market_rvol": 0.0, "pre_market_volume": 0}
+                continue
+
+            if intraday.index.tzinfo is None:
+                intraday.index = intraday.index.tz_localize("UTC")
+            intraday_et = intraday.tz_convert(ET)
+
+            # Split pre-market vs regular hours
+            pre_mask = intraday_et.index.time < pd.Timestamp("09:30").time()
+            reg_mask = intraday_et.index.time >= pd.Timestamp("09:30").time()
+
+            pre_bars = intraday_et[pre_mask]
+            reg_bars = intraday_et[reg_mask]
+
+            prev_close = candidate_map[sym]["prev_close"]
+            avg_vol = candidate_map[sym]["avg_volume"]
+
+            # Pre-market price is the last pre-market bar close
+            if not pre_bars.empty:
+                pre_price = float(pre_bars["Close"].iloc[-1])
+                pre_vol = int(pre_bars["Volume"].sum())
+            else:
+                pre_price = prev_close
+                pre_vol = 0
+
+            # Gap % = pre-market price vs prior close
+            gap_pct = ((pre_price - prev_close) / prev_close * 100) if prev_close else 0
+
+            # Pre-market RVOL = pre vol vs avg pre-market vol (est. 15% of daily)
+            avg_pre_vol = int(avg_vol * 0.15)
+            pre_rvol = pre_vol / avg_pre_vol if avg_pre_vol > 0 else 0.0
+
+            # Intraday RVOL if market is open
+            if not reg_bars.empty:
+                now_et = datetime.now(ET)
+                mins_open = max(1, (now_et.hour * 60 + now_et.minute) - 570)
+                reg_vol = int(reg_bars["Volume"].sum())
+                prorated_avg = avg_vol * (mins_open / 390)
+                rvol = reg_vol / prorated_avg if prorated_avg > 0 else 1.0
+                current_price = float(reg_bars["Close"].iloc[-1])
+            else:
+                rvol = pre_rvol
+                current_price = pre_price
+                reg_vol = 0
+
+            results[sym] = {
+                **candidate_map[sym],
+                "price": round(current_price, 2),
+                "gap_pct": round(gap_pct, 2),
+                "rvol": round(rvol, 2),
+                "pre_market_rvol": round(pre_rvol, 2),
+                "pre_market_volume": pre_vol,
+                "volume_today": reg_vol,
+            }
+
+        except Exception as e:
+            logger.debug(f"Pre-market pull failed for {sym}: {e}")
+            # Include with defaults so it's not lost entirely
+            c = candidate_map[sym]
+            results[sym] = {**c, "gap_pct": 0.0, "rvol": 1.0,
+                             "pre_market_rvol": 0.0, "pre_market_volume": 0}
+
+        time.sleep(0.1)  # Light rate limiting
+
+    logger.info(f"Pre-market data fetched for {len(results)} tickers")
+    return results
+
+
+def batch_screener_data(symbols: list) -> dict:
+    """
+    Legacy single-step screener — kept for compatibility.
+    Now calls the two-step process internally.
+    """
+    candidates = batch_daily_filter(symbols)
+    return get_premarket_data(candidates)
 
 
 def get_ticker_snapshot(symbol: str) -> TickerSnapshot:
@@ -194,46 +363,6 @@ def get_ticker_snapshot(symbol: str) -> TickerSnapshot:
             above_vwap=False, above_pdh=False, above_ema9=False, above_ema20=False,
             ema_stack_bullish=False, gap_above_pdh=False, error=str(e)
         )
-
-
-def batch_screener_data(symbols: list) -> dict:
-    results = {}
-    for i in range(0, len(symbols), 50):
-        batch = symbols[i:i+50]
-        try:
-            raw = yf.download(batch, period="30d", interval="1d",
-                              group_by="ticker", auto_adjust=True, progress=False, threads=True)
-            for sym in batch:
-                try:
-                    df = raw[sym] if len(batch) > 1 and sym in raw.columns.get_level_values(0) else (raw if len(batch) == 1 else pd.DataFrame())
-                    if df.empty or len(df) < 5:
-                        continue
-                    price = float(df["Close"].iloc[-1])
-                    if price < 10 or price > 150:
-                        continue
-                    avg_vol = int(df["Volume"].iloc[-21:-1].mean())
-                    if avg_vol < 1_000_000:
-                        continue
-                    prev_close = float(df["Close"].iloc[-2])
-                    today_open = float(df["Open"].iloc[-1])
-                    today_vol  = int(df["Volume"].iloc[-1])
-                    gap_pct = (today_open - prev_close) / prev_close * 100
-                    rvol = today_vol / avg_vol if avg_vol > 0 else 1.0
-                    h, l, c = df["High"], df["Low"], df["Close"].shift(1)
-                    tr = pd.concat([h-l, (h-c).abs(), (l-c).abs()], axis=1).max(axis=1)
-                    atr = float(tr.rolling(14).mean().iloc[-1])
-                    if atr < 1.0:
-                        continue
-                    results[sym] = {"price": price, "prev_close": prev_close,
-                                    "gap_pct": gap_pct, "rvol": rvol, "atr": atr,
-                                    "avg_volume": avg_vol, "volume_today": today_vol}
-                except Exception:
-                    pass
-        except Exception as e:
-            logger.warning(f"Batch {i//50+1} failed: {e}")
-        if i + 50 < len(symbols):
-            time.sleep(0.5)
-    return results
 
 
 def market_status() -> str:

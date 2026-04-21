@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-04-21T14:51:00.101079+00:00",
-  "updated_at_mt": "2026-04-21 08:50 MT",
+  "updated_at": "2026-04-21T16:00:03.573240+00:00",
+  "updated_at_mt": "2026-04-21 09:59 MT",
   "market_status": "OPEN",
   "new_strong_signals": [],
   "signal_count": 15,
   "signals": {
     "ALK": {
       "symbol": "ALK",
-      "price": 42.40999984741211,
-      "best_score": 2.5,
+      "price": 42.005001068115234,
+      "best_score": 2.75,
       "best_setup": "None",
       "launchpad": {
-        "total": 2.25,
+        "total": 2.75,
         "signal_label": "WEAK",
         "vwap_points": 0.0,
         "pdh_points": 0.0,
-        "ema_points": 1.5,
+        "ema_points": 2.0,
         "volume_points": 0.0,
         "ema_stack_points": 0.75,
         "rationale": [
           "\u274c Below VWAP",
           "\u274c Below PDH ($45.25)",
-          "\u2705 Riding 9 EMA ($41.93)",
-          "\u2705 Above 20 EMA ($41.07)",
-          "\u26a0\ufe0f Elevated volume (RVOL 2.38x) \u2014 may be moving already",
+          "\u2705 Riding 9 EMA ($41.85)",
+          "\u2705 Riding 20 EMA ($41.03)",
+          "\u26a0\ufe0f Elevated volume (RVOL 1.98x) \u2014 may be moving already",
           "\u2796 Above 9 & 20 EMA, stack not fully confirmed"
         ]
       },
@@ -40,70 +40,70 @@
           "\u274c Did not open above PDH ($45.25)",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
           "\u274c Below VWAP \u2014 gap may be fading",
-          "\u2796 Intraday RVOL 2.4x"
+          "\u2796 Intraday RVOL 2.0x"
         ]
       },
-      "snapshot_timestamp": "14:50:54 UTC"
+      "snapshot_timestamp": "15:59:58 UTC"
     },
     "INTC": {
       "symbol": "INTC",
-      "price": 66.54199981689453,
-      "best_score": 2.5,
+      "price": 66.56529998779297,
+      "best_score": 3.0,
       "best_setup": "None",
       "launchpad": {
-        "total": 2.5,
+        "total": 3.0,
         "signal_label": "WEAK",
         "vwap_points": 0.0,
         "pdh_points": 0.0,
         "ema_points": 1.0,
-        "volume_points": 0.0,
+        "volume_points": 0.5,
         "ema_stack_points": 1.5,
         "rationale": [
           "\u274c Below VWAP",
           "\u274c Below PDH ($69.21)",
           "\u2705 Above 9 EMA ($63.96)",
           "\u2705 Above 20 EMA ($58.42)",
-          "\u26a0\ufe0f Elevated volume (RVOL 1.54x) \u2014 may be moving already",
+          "\u2796 Normal volume (RVOL 1.16x)",
           "\u2705 Bullish EMA stack (9 > 20 > 50)"
         ]
       },
       "gap_and_go": {
-        "total": 1.5,
+        "total": 1.0,
         "signal_label": "WEAK",
         "gap_size_points": 1.0,
         "gap_above_pdh_points": 0.0,
         "pre_market_rvol_points": 0.0,
         "vwap_hold_points": 0.0,
-        "intraday_rvol_points": 0.5,
+        "intraday_rvol_points": 0.0,
         "rationale": [
           "\u2796 Gap up 2.2% \u2014 modest",
           "\u274c Did not open above PDH ($69.21)",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
           "\u274c Below VWAP \u2014 gap may be fading",
-          "\u2796 Intraday RVOL 1.5x"
+          "\u274c Intraday RVOL 1.2x \u2014 weak follow-through"
         ]
       },
-      "snapshot_timestamp": "14:50:54 UTC"
+      "snapshot_timestamp": "15:59:59 UTC"
     },
     "VGNT": {
       "symbol": "VGNT",
-      "price": 35.06999969482422,
-      "best_score": 3.5,
+      "price": 34.130001068115234,
+      "best_score": 4.0,
       "best_setup": "None",
       "launchpad": {
-        "total": 3.5,
+        "total": 4.0,
         "signal_label": "WEAK",
         "vwap_points": 0.0,
         "pdh_points": 0.0,
         "ema_points": 1.0,
-        "volume_points": 1.0,
+        "volume_points": 1.5,
         "ema_stack_points": 1.5,
         "rationale": [
           "\u274c Below VWAP",
           "\u274c Below PDH ($36.31)",
-          "\u2705 Above 9 EMA ($33.04)",
-          "\u2705 Above 20 EMA ($31.66)",
-          "\u2705 Below-avg volume (RVOL 0.88x)",
+          "\u2705 Above 9 EMA ($32.86)",
+          "\u2705 Above 20 EMA ($31.57)",
+          "\u2705 Volume drying up (RVOL 0.58x) \u2014 coiling signal",
           "\u2705 Bullish EMA stack (9 > 20 > 50)"
         ]
       },
@@ -120,54 +120,14 @@
           "\u274c Did not open above PDH ($36.31)",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
           "\u274c Below VWAP \u2014 gap may be fading",
-          "\u274c Intraday RVOL 0.9x \u2014 weak follow-through"
+          "\u274c Intraday RVOL 0.6x \u2014 weak follow-through"
         ]
       },
-      "snapshot_timestamp": "14:50:55 UTC"
-    },
-    "AAL": {
-      "symbol": "AAL",
-      "price": 12.045000076293945,
-      "best_score": 2.75,
-      "best_setup": "None",
-      "launchpad": {
-        "total": 2.75,
-        "signal_label": "WEAK",
-        "vwap_points": 0.0,
-        "pdh_points": 0.0,
-        "ema_points": 1.5,
-        "volume_points": 0.5,
-        "ema_stack_points": 0.75,
-        "rationale": [
-          "\u274c Below VWAP",
-          "\u274c Below PDH ($12.47)",
-          "\u2705 Riding 9 EMA ($11.96)",
-          "\u2705 Above 20 EMA ($11.64)",
-          "\u2796 Normal volume (RVOL 1.13x)",
-          "\u2796 Above 9 & 20 EMA, stack not fully confirmed"
-        ]
-      },
-      "gap_and_go": {
-        "total": 1.0,
-        "signal_label": "WEAK",
-        "gap_size_points": 1.0,
-        "gap_above_pdh_points": 0.0,
-        "pre_market_rvol_points": 0.0,
-        "vwap_hold_points": 0.0,
-        "intraday_rvol_points": 0.0,
-        "rationale": [
-          "\u2796 Gap down 1.5% \u2014 modest",
-          "\u274c Did not open above PDH ($12.47)",
-          "\u274c Pre-market RVOL 0.0x \u2014 weak",
-          "\u274c Below VWAP \u2014 gap may be fading",
-          "\u274c Intraday RVOL 1.1x \u2014 weak follow-through"
-        ]
-      },
-      "snapshot_timestamp": "14:50:55 UTC"
+      "snapshot_timestamp": "15:59:59 UTC"
     },
     "HUN": {
       "symbol": "HUN",
-      "price": 13.744999885559082,
+      "price": 13.505000114440918,
       "best_score": 4.5,
       "best_setup": "None",
       "launchpad": {
@@ -181,9 +141,9 @@
         "rationale": [
           "\u274c Below VWAP",
           "\u274c Below PDH ($13.95)",
-          "\u2705 Riding 9 EMA ($13.54)",
-          "\u2705 Above 20 EMA ($13.20)",
-          "\u2705 Volume drying up (RVOL 0.33x) \u2014 coiling signal",
+          "\u2705 Riding 9 EMA ($13.49)",
+          "\u2705 Above 20 EMA ($13.17)",
+          "\u2705 Volume drying up (RVOL 0.35x) \u2014 coiling signal",
           "\u2705 Bullish EMA stack (9 > 20 > 50)"
         ]
       },
@@ -203,27 +163,67 @@
           "\u274c Intraday RVOL 0.3x \u2014 weak follow-through"
         ]
       },
-      "snapshot_timestamp": "14:50:55 UTC"
+      "snapshot_timestamp": "15:59:59 UTC"
+    },
+    "AAL": {
+      "symbol": "AAL",
+      "price": 11.835000038146973,
+      "best_score": 1.5,
+      "best_setup": "None",
+      "launchpad": {
+        "total": 1.5,
+        "signal_label": "WEAK",
+        "vwap_points": 0.0,
+        "pdh_points": 0.0,
+        "ema_points": 1.0,
+        "volume_points": 0.5,
+        "ema_stack_points": 0.0,
+        "rationale": [
+          "\u274c Below VWAP",
+          "\u274c Below PDH ($12.47)",
+          "\u274c Below 9 EMA ($11.92)",
+          "\u2705 Riding 20 EMA ($11.62)",
+          "\u2796 Normal volume (RVOL 1.11x)",
+          "\u274c EMAs not in bullish alignment"
+        ]
+      },
+      "gap_and_go": {
+        "total": 1.0,
+        "signal_label": "WEAK",
+        "gap_size_points": 1.0,
+        "gap_above_pdh_points": 0.0,
+        "pre_market_rvol_points": 0.0,
+        "vwap_hold_points": 0.0,
+        "intraday_rvol_points": 0.0,
+        "rationale": [
+          "\u2796 Gap down 1.5% \u2014 modest",
+          "\u274c Did not open above PDH ($12.47)",
+          "\u274c Pre-market RVOL 0.0x \u2014 weak",
+          "\u274c Below VWAP \u2014 gap may be fading",
+          "\u274c Intraday RVOL 1.1x \u2014 weak follow-through"
+        ]
+      },
+      "snapshot_timestamp": "16:00:00 UTC"
     },
     "OWL": {
       "symbol": "OWL",
-      "price": 10.10990047454834,
-      "best_score": 3.75,
+      "price": 9.949899673461914,
+      "best_score": 2.75,
       "best_setup": "None",
       "launchpad": {
-        "total": 3.75,
+        "total": 2.75,
         "signal_label": "WEAK",
         "vwap_points": 0.0,
-        "pdh_points": 1.5,
+        "pdh_points": 0.0,
         "ema_points": 1.0,
-        "volume_points": 0.5,
+        "volume_points": 1.0,
         "ema_stack_points": 0.75,
         "rationale": [
           "\u274c Below VWAP",
-          "\u2705 Above PDH by 1.4%",
-          "\u2705 Above 9 EMA ($9.50)",
-          "\u2705 Above 20 EMA ($9.29)",
-          "\u2796 Normal volume (RVOL 1.11x)",
+          "\u274c Below PDH ($9.97)",
+          "\u2705 Above 9 EMA ($9.46)",
+          "\u2705 Above 20 EMA ($9.28)",
+          "\u2705 Below-avg volume (RVOL 0.92x)",
           "\u2796 Above 9 & 20 EMA, stack not fully confirmed"
         ]
       },
@@ -240,14 +240,14 @@
           "\u2705 Opened above PDH ($9.97) \u2014 prior resistance cleared",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
           "\u274c Below VWAP \u2014 gap may be fading",
-          "\u274c Intraday RVOL 1.1x \u2014 weak follow-through"
+          "\u274c Intraday RVOL 0.9x \u2014 weak follow-through"
         ]
       },
-      "snapshot_timestamp": "14:50:56 UTC"
+      "snapshot_timestamp": "16:00:00 UTC"
     },
     "RIOT": {
       "symbol": "RIOT",
-      "price": 18.024999618530273,
+      "price": 17.719999313354492,
       "best_score": 3.5,
       "best_setup": "None",
       "launchpad": {
@@ -261,9 +261,9 @@
         "rationale": [
           "\u274c Below VWAP",
           "\u274c Below PDH ($18.53)",
-          "\u2705 Above 9 EMA ($17.21)",
-          "\u2705 Above 20 EMA ($16.15)",
-          "\u2705 Below-avg volume (RVOL 0.85x)",
+          "\u2705 Above 9 EMA ($17.15)",
+          "\u2705 Above 20 EMA ($16.12)",
+          "\u2705 Below-avg volume (RVOL 0.76x)",
           "\u2705 Bullish EMA stack (9 > 20 > 50)"
         ]
       },
@@ -280,30 +280,30 @@
           "\u274c Did not open above PDH ($18.53)",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
           "\u274c Below VWAP \u2014 gap may be fading",
-          "\u274c Intraday RVOL 0.9x \u2014 weak follow-through"
+          "\u274c Intraday RVOL 0.8x \u2014 weak follow-through"
         ]
       },
-      "snapshot_timestamp": "14:50:56 UTC"
+      "snapshot_timestamp": "16:00:01 UTC"
     },
     "DT": {
       "symbol": "DT",
-      "price": 36.189998626708984,
-      "best_score": 2.25,
+      "price": 35.8849983215332,
+      "best_score": 2.75,
       "best_setup": "None",
       "launchpad": {
-        "total": 2.25,
+        "total": 2.75,
         "signal_label": "WEAK",
         "vwap_points": 0.0,
         "pdh_points": 0.0,
-        "ema_points": 1.5,
+        "ema_points": 2.0,
         "volume_points": 0.0,
         "ema_stack_points": 0.75,
         "rationale": [
           "\u274c Below VWAP",
           "\u274c Below PDH ($36.24)",
-          "\u2705 Above 9 EMA ($35.45)",
-          "\u2705 Riding 20 EMA ($35.90)",
-          "\u26a0\ufe0f Elevated volume (RVOL 2.71x) \u2014 may be moving already",
+          "\u2705 Riding 9 EMA ($35.39)",
+          "\u2705 Riding 20 EMA ($35.87)",
+          "\u26a0\ufe0f Elevated volume (RVOL 2.54x) \u2014 may be moving already",
           "\u2796 Above 9 & 20 EMA, stack not fully confirmed"
         ]
       },
@@ -320,110 +320,110 @@
           "\u274c Did not open above PDH ($36.24)",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
           "\u274c Below VWAP \u2014 gap may be fading",
-          "\u2705 Intraday RVOL 2.7x \u2014 strong follow-through"
+          "\u2705 Intraday RVOL 2.5x \u2014 strong follow-through"
         ]
       },
-      "snapshot_timestamp": "14:50:57 UTC"
-    },
-    "ENPH": {
-      "symbol": "ENPH",
-      "price": 35.564998626708984,
-      "best_score": 5.25,
-      "best_setup": "Launchpad",
-      "launchpad": {
-        "total": 5.25,
-        "signal_label": "MODERATE",
-        "vwap_points": 2.5,
-        "pdh_points": 0.5,
-        "ema_points": 1.5,
-        "volume_points": 0.0,
-        "ema_stack_points": 0.75,
-        "rationale": [
-          "\u2705 Tight to VWAP (1.3% above) \u2014 ideal coil zone",
-          "\u26a0\ufe0f Extended 3.7% above PDH",
-          "\u2705 Above 9 EMA ($33.49)",
-          "\u2705 Riding 20 EMA ($35.10)",
-          "\u26a0\ufe0f Elevated volume (RVOL 1.74x) \u2014 may be moving already",
-          "\u2796 Above 9 & 20 EMA, stack not fully confirmed"
-        ]
-      },
-      "gap_and_go": {
-        "total": 2.5,
-        "signal_label": "WEAK",
-        "gap_size_points": 0.0,
-        "gap_above_pdh_points": 0.0,
-        "pre_market_rvol_points": 0.0,
-        "vwap_hold_points": 2.0,
-        "intraday_rvol_points": 0.5,
-        "rationale": [
-          "\u274c Gap too small (1.1%)",
-          "\u274c Did not open above PDH ($34.31)",
-          "\u274c Pre-market RVOL 0.0x \u2014 weak",
-          "\u2705 Holding above VWAP ($35.11) \u2014 gap defending",
-          "\u2796 Intraday RVOL 1.7x"
-        ]
-      },
-      "snapshot_timestamp": "14:50:57 UTC"
+      "snapshot_timestamp": "16:00:01 UTC"
     },
     "MRNA": {
       "symbol": "MRNA",
-      "price": 55.20000076293945,
-      "best_score": 4.0,
-      "best_setup": "None",
-      "launchpad": {
-        "total": 4.0,
-        "signal_label": "WEAK",
-        "vwap_points": 1.5,
-        "pdh_points": 0.0,
-        "ema_points": 1.0,
-        "volume_points": 0.0,
-        "ema_stack_points": 1.5,
-        "rationale": [
-          "\u2705 Above VWAP (1.7%)",
-          "\u274c Below PDH ($55.72)",
-          "\u2705 Above 9 EMA ($53.46)",
-          "\u2705 Above 20 EMA ($52.48)",
-          "\u26a0\ufe0f Elevated volume (RVOL 1.95x) \u2014 may be moving already",
-          "\u2705 Bullish EMA stack (9 > 20 > 50)"
-        ]
-      },
-      "gap_and_go": {
-        "total": 2.5,
-        "signal_label": "WEAK",
-        "gap_size_points": 0.0,
-        "gap_above_pdh_points": 0.0,
-        "pre_market_rvol_points": 0.0,
-        "vwap_hold_points": 2.0,
-        "intraday_rvol_points": 0.5,
-        "rationale": [
-          "\u274c Gap too small (1.3%)",
-          "\u274c Did not open above PDH ($55.72)",
-          "\u274c Pre-market RVOL 0.0x \u2014 weak",
-          "\u2705 Holding above VWAP ($54.29) \u2014 gap defending",
-          "\u2796 Intraday RVOL 2.0x"
-        ]
-      },
-      "snapshot_timestamp": "14:50:57 UTC"
-    },
-    "AFRM": {
-      "symbol": "AFRM",
-      "price": 67.30500030517578,
+      "price": 54.5099983215332,
       "best_score": 5.5,
       "best_setup": "Launchpad",
       "launchpad": {
         "total": 5.5,
         "signal_label": "MODERATE",
+        "vwap_points": 2.5,
+        "pdh_points": 0.0,
+        "ema_points": 1.0,
+        "volume_points": 0.5,
+        "ema_stack_points": 1.5,
+        "rationale": [
+          "\u2705 Tight to VWAP (0.3% above) \u2014 ideal coil zone",
+          "\u274c Below PDH ($55.72)",
+          "\u2705 Above 9 EMA ($53.33)",
+          "\u2705 Above 20 EMA ($52.41)",
+          "\u2796 Normal volume (RVOL 1.37x)",
+          "\u2705 Bullish EMA stack (9 > 20 > 50)"
+        ]
+      },
+      "gap_and_go": {
+        "total": 2.0,
+        "signal_label": "WEAK",
+        "gap_size_points": 0.0,
+        "gap_above_pdh_points": 0.0,
+        "pre_market_rvol_points": 0.0,
+        "vwap_hold_points": 2.0,
+        "intraday_rvol_points": 0.0,
+        "rationale": [
+          "\u274c Gap too small (1.3%)",
+          "\u274c Did not open above PDH ($55.72)",
+          "\u274c Pre-market RVOL 0.0x \u2014 weak",
+          "\u2705 Holding above VWAP ($54.35) \u2014 gap defending",
+          "\u274c Intraday RVOL 1.4x \u2014 weak follow-through"
+        ]
+      },
+      "snapshot_timestamp": "16:00:01 UTC"
+    },
+    "ENPH": {
+      "symbol": "ENPH",
+      "price": 35.029998779296875,
+      "best_score": 2.5,
+      "best_setup": "None",
+      "launchpad": {
+        "total": 2.5,
+        "signal_label": "WEAK",
         "vwap_points": 0.0,
-        "pdh_points": 2.5,
+        "pdh_points": 1.5,
+        "ema_points": 0.5,
+        "volume_points": 0.5,
+        "ema_stack_points": 0.0,
+        "rationale": [
+          "\u274c Below VWAP",
+          "\u2705 Above PDH by 2.1%",
+          "\u2705 Above 9 EMA ($33.38)",
+          "\u274c Below 20 EMA ($35.05)",
+          "\u2796 Normal volume (RVOL 1.42x)",
+          "\u274c EMAs not in bullish alignment"
+        ]
+      },
+      "gap_and_go": {
+        "total": 0.0,
+        "signal_label": "WEAK",
+        "gap_size_points": 0.0,
+        "gap_above_pdh_points": 0.0,
+        "pre_market_rvol_points": 0.0,
+        "vwap_hold_points": 0.0,
+        "intraday_rvol_points": 0.0,
+        "rationale": [
+          "\u274c Gap too small (1.1%)",
+          "\u274c Did not open above PDH ($34.31)",
+          "\u274c Pre-market RVOL 0.0x \u2014 weak",
+          "\u274c Below VWAP \u2014 gap may be fading",
+          "\u274c Intraday RVOL 1.4x \u2014 weak follow-through"
+        ]
+      },
+      "snapshot_timestamp": "16:00:02 UTC"
+    },
+    "AFRM": {
+      "symbol": "AFRM",
+      "price": 66.13999938964844,
+      "best_score": 3.0,
+      "best_setup": "None",
+      "launchpad": {
+        "total": 3.0,
+        "signal_label": "WEAK",
+        "vwap_points": 0.0,
+        "pdh_points": 0.0,
         "ema_points": 1.0,
         "volume_points": 0.5,
         "ema_stack_points": 1.5,
         "rationale": [
           "\u274c Below VWAP",
-          "\u2705 Sitting on PDH ($67.15) \u2014 resistance turned support",
-          "\u2705 Above 9 EMA ($59.86)",
-          "\u2705 Above 20 EMA ($54.69)",
-          "\u2796 Normal volume (RVOL 1.08x)",
+          "\u274c Below PDH ($67.15)",
+          "\u2705 Above 9 EMA ($59.63)",
+          "\u2705 Above 20 EMA ($54.58)",
+          "\u2796 Normal volume (RVOL 1.33x)",
           "\u2705 Bullish EMA stack (9 > 20 > 50)"
         ]
       },
@@ -440,54 +440,54 @@
           "\u2705 Opened above PDH ($67.15) \u2014 prior resistance cleared",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
           "\u274c Below VWAP \u2014 gap may be fading",
-          "\u274c Intraday RVOL 1.1x \u2014 weak follow-through"
+          "\u274c Intraday RVOL 1.3x \u2014 weak follow-through"
         ]
       },
-      "snapshot_timestamp": "14:50:58 UTC"
+      "snapshot_timestamp": "16:00:02 UTC"
     },
     "RBLX": {
       "symbol": "RBLX",
-      "price": 63.45000076293945,
-      "best_score": 6.25,
-      "best_setup": "Launchpad",
+      "price": 62.345001220703125,
+      "best_score": 4.75,
+      "best_setup": "None",
       "launchpad": {
-        "total": 6.25,
-        "signal_label": "MODERATE",
-        "vwap_points": 2.5,
-        "pdh_points": 1.5,
+        "total": 4.75,
+        "signal_label": "WEAK",
+        "vwap_points": 0.0,
+        "pdh_points": 2.5,
         "ema_points": 1.0,
         "volume_points": 0.5,
         "ema_stack_points": 0.75,
         "rationale": [
-          "\u2705 Tight to VWAP (0.5% above) \u2014 ideal coil zone",
-          "\u2705 Above PDH by 1.9%",
-          "\u2705 Above 9 EMA ($60.02)",
-          "\u2705 Above 20 EMA ($58.98)",
-          "\u2796 Normal volume (RVOL 1.32x)",
+          "\u274c Below VWAP",
+          "\u2705 Sitting on PDH ($62.28) \u2014 resistance turned support",
+          "\u2705 Above 9 EMA ($59.80)",
+          "\u2705 Above 20 EMA ($58.87)",
+          "\u2796 Normal volume (RVOL 1.00x)",
           "\u2796 Above 9 & 20 EMA, stack not fully confirmed"
         ]
       },
       "gap_and_go": {
-        "total": 2.0,
+        "total": 0.0,
         "signal_label": "WEAK",
         "gap_size_points": 0.0,
         "gap_above_pdh_points": 0.0,
         "pre_market_rvol_points": 0.0,
-        "vwap_hold_points": 2.0,
+        "vwap_hold_points": 0.0,
         "intraday_rvol_points": 0.0,
         "rationale": [
           "\u274c Gap too small (0.3%)",
           "\u274c Did not open above PDH ($62.28)",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
-          "\u2705 Holding above VWAP ($63.14) \u2014 gap defending",
-          "\u274c Intraday RVOL 1.3x \u2014 weak follow-through"
+          "\u274c Below VWAP \u2014 gap may be fading",
+          "\u274c Intraday RVOL 1.0x \u2014 weak follow-through"
         ]
       },
-      "snapshot_timestamp": "14:50:58 UTC"
+      "snapshot_timestamp": "16:00:02 UTC"
     },
     "U": {
       "symbol": "U",
-      "price": 25.96500015258789,
+      "price": 25.729999542236328,
       "best_score": 3.25,
       "best_setup": "None",
       "launchpad": {
@@ -501,9 +501,9 @@
         "rationale": [
           "\u274c Below VWAP",
           "\u274c Below PDH ($26.73)",
-          "\u2705 Above 9 EMA ($24.70)",
-          "\u2705 Above 20 EMA ($23.15)",
-          "\u2705 Volume drying up (RVOL 0.66x) \u2014 coiling signal",
+          "\u2705 Above 9 EMA ($24.65)",
+          "\u2705 Above 20 EMA ($23.13)",
+          "\u2705 Volume drying up (RVOL 0.60x) \u2014 coiling signal",
           "\u2796 Above 9 & 20 EMA, stack not fully confirmed"
         ]
       },
@@ -520,90 +520,90 @@
           "\u2705 Opened above PDH ($26.73) \u2014 prior resistance cleared",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
           "\u274c Below VWAP \u2014 gap may be fading",
-          "\u274c Intraday RVOL 0.7x \u2014 weak follow-through"
+          "\u274c Intraday RVOL 0.6x \u2014 weak follow-through"
         ]
       },
-      "snapshot_timestamp": "14:50:59 UTC"
+      "snapshot_timestamp": "16:00:03 UTC"
     },
     "PATH": {
       "symbol": "PATH",
-      "price": 11.082599639892578,
-      "best_score": 4.75,
+      "price": 10.975000381469727,
+      "best_score": 4.25,
       "best_setup": "None",
       "launchpad": {
-        "total": 4.75,
+        "total": 4.25,
         "signal_label": "WEAK",
-        "vwap_points": 2.5,
-        "pdh_points": 0.5,
-        "ema_points": 1.0,
-        "volume_points": 0.0,
+        "vwap_points": 0.0,
+        "pdh_points": 1.5,
+        "ema_points": 1.5,
+        "volume_points": 0.5,
         "ema_stack_points": 0.75,
         "rationale": [
-          "\u2705 Tight to VWAP (0.4% above) \u2014 ideal coil zone",
-          "\u26a0\ufe0f Extended 3.4% above PDH",
-          "\u2705 Above 9 EMA ($10.58)",
-          "\u2705 Above 20 EMA ($10.74)",
-          "\u26a0\ufe0f Elevated volume (RVOL 1.59x) \u2014 may be moving already",
+          "\u274c Below VWAP",
+          "\u2705 Above PDH by 2.4%",
+          "\u2705 Above 9 EMA ($10.56)",
+          "\u2705 Riding 20 EMA ($10.73)",
+          "\u2796 Normal volume (RVOL 1.41x)",
           "\u2796 Above 9 & 20 EMA, stack not fully confirmed"
         ]
       },
       "gap_and_go": {
-        "total": 2.5,
+        "total": 0.0,
         "signal_label": "WEAK",
         "gap_size_points": 0.0,
         "gap_above_pdh_points": 0.0,
         "pre_market_rvol_points": 0.0,
-        "vwap_hold_points": 2.0,
-        "intraday_rvol_points": 0.5,
+        "vwap_hold_points": 0.0,
+        "intraday_rvol_points": 0.0,
         "rationale": [
           "\u274c Gap too small (1.1%)",
           "\u274c Did not open above PDH ($10.72)",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
-          "\u2705 Holding above VWAP ($11.04) \u2014 gap defending",
-          "\u2796 Intraday RVOL 1.6x"
+          "\u274c Below VWAP \u2014 gap may be fading",
+          "\u274c Intraday RVOL 1.4x \u2014 weak follow-through"
         ]
       },
-      "snapshot_timestamp": "14:50:59 UTC"
+      "snapshot_timestamp": "16:00:03 UTC"
     },
     "CLSK": {
       "symbol": "CLSK",
-      "price": 11.930000305175781,
-      "best_score": 5.5,
-      "best_setup": "Launchpad",
+      "price": 11.59000015258789,
+      "best_score": 3.5,
+      "best_setup": "None",
       "launchpad": {
-        "total": 5.5,
-        "signal_label": "MODERATE",
-        "vwap_points": 2.5,
+        "total": 3.5,
+        "signal_label": "WEAK",
+        "vwap_points": 0.0,
         "pdh_points": 0.0,
         "ema_points": 1.0,
-        "volume_points": 0.5,
+        "volume_points": 1.0,
         "ema_stack_points": 1.5,
         "rationale": [
-          "\u2705 Tight to VWAP (0.0% above) \u2014 ideal coil zone",
+          "\u274c Below VWAP",
           "\u274c Below PDH ($12.15)",
-          "\u2705 Above 9 EMA ($11.23)",
-          "\u2705 Above 20 EMA ($10.55)",
-          "\u2796 Normal volume (RVOL 1.18x)",
+          "\u2705 Above 9 EMA ($11.17)",
+          "\u2705 Above 20 EMA ($10.52)",
+          "\u2705 Below-avg volume (RVOL 0.96x)",
           "\u2705 Bullish EMA stack (9 > 20 > 50)"
         ]
       },
       "gap_and_go": {
-        "total": 2.0,
+        "total": 0.0,
         "signal_label": "WEAK",
         "gap_size_points": 0.0,
         "gap_above_pdh_points": 0.0,
         "pre_market_rvol_points": 0.0,
-        "vwap_hold_points": 2.0,
+        "vwap_hold_points": 0.0,
         "intraday_rvol_points": 0.0,
         "rationale": [
           "\u274c Gap too small (0.7%)",
           "\u274c Did not open above PDH ($12.15)",
           "\u274c Pre-market RVOL 0.0x \u2014 weak",
-          "\u2705 Holding above VWAP ($11.93) \u2014 gap defending",
-          "\u274c Intraday RVOL 1.2x \u2014 weak follow-through"
+          "\u274c Below VWAP \u2014 gap may be fading",
+          "\u274c Intraday RVOL 1.0x \u2014 weak follow-through"
         ]
       },
-      "snapshot_timestamp": "14:51:00 UTC"
+      "snapshot_timestamp": "16:00:03 UTC"
     }
   }
 }

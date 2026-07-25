@@ -2,8 +2,16 @@ name: Intraday Signal Monitor
 
 on:
   schedule:
-    - cron: '5,10,15,20,25,30,35,40,45,50,55 13-20 * * 1-5'
+    # Every 15 min, 13:00-21:59 UTC, Mon-Fri. Window is a DST-safe superset of US
+    # market hours (EDT 13:30-20:00, EST 14:30-21:00); signal_monitor.py's
+    # market_status() gate makes any off-hours run a cheap no-op.
+    - cron: '*/15 13-21 * * 1-5'
   workflow_dispatch:
+
+# Never let a slow/queued run overlap the next scheduled one.
+concurrency:
+  group: intraday-monitor
+  cancel-in-progress: true
 
 jobs:
   monitor:
@@ -15,11 +23,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install yfinance pandas numpy pytz requests lxml
+          cache: pip
+          cache-dependency-path: requirements-ci.txt
+      - run: pip install -r requirements-ci.txt
       - run: python signal_monitor.py
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add signals.json
+          # signal_monitor.py only rewrites signals.json when the signal content
+          # actually changes, so an unchanged run leaves nothing to commit.
           git diff --staged --quiet || git commit -m "Signals update [skip ci]"
           git push

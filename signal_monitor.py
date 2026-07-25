@@ -74,14 +74,28 @@ def run_monitor():
 
 
 def _write(signals, status, ts, new_strong=None):
-    SIGNALS_PATH.write_text(json.dumps({
+    payload = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "updated_at_mt": ts,
         "market_status": status,
         "new_strong_signals": new_strong or [],
         "signal_count": len(signals),
         "signals": signals,
-    }, indent=2))
+    }
+    # Skip the rewrite when nothing meaningful changed (ignoring the timestamps),
+    # so an unchanged run produces no git diff and no commit. This avoids a commit
+    # on every scheduled run — most importantly the identical no-op runs when the
+    # market is closed.
+    volatile = {"updated_at", "updated_at_mt"}
+    if SIGNALS_PATH.exists():
+        try:
+            old = json.loads(SIGNALS_PATH.read_text())
+            if all(old.get(k) == v for k, v in payload.items() if k not in volatile):
+                logger.info("signals unchanged — skipping write")
+                return
+        except Exception:
+            pass
+    SIGNALS_PATH.write_text(json.dumps(payload, indent=2))
 
 
 if __name__ == "__main__":

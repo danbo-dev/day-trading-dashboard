@@ -1,0 +1,9 @@
+# Minimal deps for the headless GitHub Actions jobs (signal_monitor.py + screener.py).
+# Excludes the local dashboard deps (streamlit, plotly, streamlit-autorefresh).
+# Kept as a separate file so actions/setup-python can cache off it.
+yfinance>=0.2.36
+pandas>=2.0.0
+numpy>=1.24.0
+requests>=2.31.0
+pytz>=2024.1
+lxml>=5.0.0

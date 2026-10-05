@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-10-05T21:07:54.673865Z",
-  "generated_at_mt": "2026-10-05 15:07 MT",
+  "generated_at": "2026-10-05T21:24:39.241726Z",
+  "generated_at_mt": "2026-10-05 15:24 MT",
   "count": 15,
   "tickers": [
     {
       "symbol": "NU",
-      "price": 15.24,
+      "price": 15.22,
       "gap_pct": 12.43,
-      "rvol": 1.81,
+      "rvol": 1.74,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.63,
       "avg_volume": 76268725,
-      "screener_score": 0.5567
+      "screener_score": 0.557
     },
     {
       "symbol": "MARA",
       "price": 11.16,
       "gap_pct": 1.69,
-      "rvol": 0.6,
+      "rvol": 0.58,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.84,
@@ -29,7 +29,7 @@
       "symbol": "RARE",
       "price": 14.58,
       "gap_pct": 1.38,
-      "rvol": 0.6,
+      "rvol": 0.58,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.9,
@@ -40,7 +40,7 @@
       "symbol": "CLSK",
       "price": 12.47,
       "gap_pct": 1.18,
-      "rvol": 0.64,
+      "rvol": 0.62,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.84,
@@ -49,20 +49,20 @@
     },
     {
       "symbol": "MGNI",
-      "price": 24.96,
+      "price": 24.5,
       "gap_pct": 1.09,
-      "rvol": 0.45,
+      "rvol": 0.44,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 1.2,
       "avg_volume": 2237850,
-      "screener_score": 0.2785
+      "screener_score": 0.283
     },
     {
       "symbol": "RBLX",
       "price": 44.58,
       "gap_pct": -0.54,
-      "rvol": 1.26,
+      "rvol": 1.21,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 2.48,
@@ -73,7 +73,7 @@
       "symbol": "SRPT",
       "price": 17.4,
       "gap_pct": -0.46,
-      "rvol": 0.64,
+      "rvol": 0.61,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.98,
@@ -82,9 +82,9 @@
     },
     {
       "symbol": "SMCI",
-      "price": 43.22,
+      "price": 43.23,
       "gap_pct": -0.27,
-      "rvol": 0.43,
+      "rvol": 0.42,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 2.19,
@@ -95,7 +95,7 @@
       "symbol": "RIOT",
       "price": 19.3,
       "gap_pct": 0.25,
-      "rvol": 0.49,
+      "rvol": 0.47,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 1.44,
@@ -106,7 +106,7 @@
       "symbol": "ACAD",
       "price": 20.5,
       "gap_pct": -0.0,
-      "rvol": 0.85,
+      "rvol": 0.82,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 1.06,
@@ -115,20 +115,20 @@
     },
     {
       "symbol": "AFRM",
-      "price": 74.65,
+      "price": 74.72,
       "gap_pct": -0.72,
-      "rvol": 0.79,
+      "rvol": 0.77,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 3.3,
       "avg_volume": 4028110,
-      "screener_score": 0.2462
+      "screener_score": 0.246
     },
     {
       "symbol": "U",
       "price": 45.74,
       "gap_pct": -0.03,
-      "rvol": 0.72,
+      "rvol": 0.7,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 2.24,
@@ -137,20 +137,20 @@
     },
     {
       "symbol": "RIVN",
-      "price": 14.55,
+      "price": 14.57,
       "gap_pct": -0.28,
-      "rvol": 0.76,
+      "rvol": 0.73,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.68,
       "avg_volume": 24413370,
-      "screener_score": 0.2435
+      "screener_score": 0.2432
     },
     {
       "symbol": "BMY",
       "price": 58.81,
       "gap_pct": -2.88,
-      "rvol": 1.31,
+      "rvol": 1.26,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 1.44,
@@ -159,14 +159,14 @@
     },
     {
       "symbol": "UPST",
-      "price": 24.27,
+      "price": 24.32,
       "gap_pct": 0.35,
-      "rvol": 1.13,
+      "rvol": 1.09,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 1.02,
       "avg_volume": 4448330,
-      "screener_score": 0.2224
+      "screener_score": 0.222
     }
   ]
 }

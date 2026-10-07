@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-07T19:12:22.280340Z",
-  "generated_at_mt": "2026-10-07 13:12 MT",
+  "generated_at": "2026-10-07T19:40:43.620905Z",
+  "generated_at_mt": "2026-10-07 13:40 MT",
   "count": 15,
   "tickers": [
     {
       "symbol": "U",
-      "price": 45.28,
+      "price": 45.1,
       "gap_pct": 3.25,
-      "rvol": 0.98,
+      "rvol": 1.52,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 2.27,
@@ -16,9 +16,9 @@
     },
     {
       "symbol": "RBLX",
-      "price": 46.6,
+      "price": 46.27,
       "gap_pct": -3.12,
-      "rvol": 0.78,
+      "rvol": 1.55,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 2.49,
@@ -27,86 +27,86 @@
     },
     {
       "symbol": "MARA",
-      "price": 10.27,
+      "price": 10.31,
       "gap_pct": -3.1,
-      "rvol": 0.77,
+      "rvol": 0.76,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.8,
-      "avg_volume": 43311030,
+      "avg_volume": 43313315,
       "screener_score": 0.3585
     },
     {
       "symbol": "RIOT",
       "price": 18.35,
       "gap_pct": -2.91,
-      "rvol": 0.79,
+      "rvol": 0.76,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 1.36,
-      "avg_volume": 15918115,
+      "avg_volume": 15918735,
       "screener_score": 0.3518
     },
     {
       "symbol": "CLSK",
-      "price": 11.49,
+      "price": 11.55,
       "gap_pct": -2.77,
-      "rvol": 0.77,
+      "rvol": 0.75,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.81,
-      "avg_volume": 16897510,
+      "avg_volume": 16898605,
       "screener_score": 0.3469
     },
     {
       "symbol": "SMCI",
-      "price": 45.42,
+      "price": 45.25,
       "gap_pct": -2.19,
-      "rvol": 0.96,
+      "rvol": 0.98,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
-      "atr": 2.1,
-      "avg_volume": 36210565,
-      "screener_score": 0.3078
+      "atr": 2.13,
+      "avg_volume": 36212895,
+      "screener_score": 0.312
     },
     {
       "symbol": "SRPT",
-      "price": 17.51,
+      "price": 17.47,
       "gap_pct": -1.59,
-      "rvol": 0.46,
+      "rvol": 0.48,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.85,
       "avg_volume": 2636785,
-      "screener_score": 0.2984
+      "screener_score": 0.2989
     },
     {
       "symbol": "RIVN",
-      "price": 14.26,
+      "price": 14.3,
       "gap_pct": -1.45,
       "rvol": 0.72,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.61,
-      "avg_volume": 25034590,
-      "screener_score": 0.2646
+      "avg_volume": 25041125,
+      "screener_score": 0.264
     },
     {
       "symbol": "ACAD",
-      "price": 19.52,
+      "price": 19.5,
       "gap_pct": 0.05,
-      "rvol": 0.32,
+      "rvol": 0.36,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
-      "atr": 1.0,
+      "atr": 1.01,
       "avg_volume": 2397585,
       "screener_score": 0.2517
     },
     {
       "symbol": "RARE",
-      "price": 14.87,
+      "price": 14.74,
       "gap_pct": -0.0,
-      "rvol": 0.57,
+      "rvol": 0.56,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.85,
@@ -115,58 +115,58 @@
     },
     {
       "symbol": "NU",
-      "price": 15.61,
+      "price": 15.64,
       "gap_pct": -1.28,
-      "rvol": 0.85,
+      "rvol": 1.4,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.62,
-      "avg_volume": 83914160,
-      "screener_score": 0.2434
+      "avg_volume": 83915715,
+      "screener_score": 0.243
     },
     {
       "symbol": "CCL",
-      "price": 26.35,
+      "price": 26.28,
       "gap_pct": -1.43,
       "rvol": 0.4,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.96,
-      "avg_volume": 27266355,
-      "screener_score": 0.2322
+      "avg_volume": 27267575,
+      "screener_score": 0.2327
     },
     {
       "symbol": "SOFI",
-      "price": 15.66,
+      "price": 15.62,
       "gap_pct": -1.4,
-      "rvol": 0.65,
+      "rvol": 0.64,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.54,
-      "avg_volume": 46430770,
-      "screener_score": 0.2214
+      "avg_volume": 46440875,
+      "screener_score": 0.2219
     },
     {
       "symbol": "BILL",
-      "price": 44.36,
+      "price": 44.15,
       "gap_pct": -1.02,
-      "rvol": 0.31,
+      "rvol": 0.54,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 1.63,
       "avg_volume": 1760655,
-      "screener_score": 0.2194
+      "screener_score": 0.2203
     },
     {
       "symbol": "MGNI",
-      "price": 25.27,
+      "price": 25.19,
       "gap_pct": 0.24,
-      "rvol": 0.49,
+      "rvol": 0.53,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 1.05,
       "avg_volume": 2186860,
-      "screener_score": 0.2162
+      "screener_score": 0.2168
     }
   ]
 }

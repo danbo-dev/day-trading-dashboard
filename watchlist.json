@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-21T17:54:15.830545Z",
-  "generated_at_mt": "2026-10-21 11:54 MT",
+  "generated_at": "2026-10-21T18:19:47.046717Z",
+  "generated_at_mt": "2026-10-21 12:19 MT",
   "count": 15,
   "tickers": [
     {
       "symbol": "SMCI",
-      "price": 35.49,
+      "price": 35.48,
       "gap_pct": 12.23,
-      "rvol": 2.66,
+      "rvol": 2.52,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 2.73,
@@ -16,9 +16,9 @@
     },
     {
       "symbol": "RIOT",
-      "price": 14.35,
+      "price": 14.38,
       "gap_pct": 4.14,
-      "rvol": 0.86,
+      "rvol": 0.9,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 1.27,
@@ -27,29 +27,29 @@
     },
     {
       "symbol": "NFLX",
-      "price": 65.61,
+      "price": 65.69,
       "gap_pct": -6.61,
-      "rvol": 4.44,
+      "rvol": 4.16,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 1.92,
       "avg_volume": 36627540,
-      "screener_score": 0.3777
+      "screener_score": 0.3775
     },
     {
       "symbol": "UPST",
-      "price": 23.88,
+      "price": 23.92,
       "gap_pct": 1.69,
       "rvol": 0.39,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 1.1,
       "avg_volume": 4332395,
-      "screener_score": 0.2895
+      "screener_score": 0.2891
     },
     {
       "symbol": "U",
-      "price": 41.36,
+      "price": 41.42,
       "gap_pct": 1.07,
       "rvol": 0.46,
       "pre_market_rvol": 0.0,
@@ -60,31 +60,31 @@
     },
     {
       "symbol": "CMG",
-      "price": 28.14,
+      "price": 28.15,
       "gap_pct": -1.99,
-      "rvol": 1.12,
+      "rvol": 1.08,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 1.22,
       "avg_volume": 21423750,
-      "screener_score": 0.2864
+      "screener_score": 0.2863
     },
     {
       "symbol": "SRPT",
-      "price": 18.64,
+      "price": 18.73,
       "gap_pct": -0.68,
-      "rvol": 0.38,
+      "rvol": 0.36,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.9,
       "avg_volume": 3157460,
-      "screener_score": 0.2652
+      "screener_score": 0.2641
     },
     {
       "symbol": "NU",
       "price": 15.1,
       "gap_pct": 1.09,
-      "rvol": 0.69,
+      "rvol": 0.67,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.66,
@@ -93,80 +93,80 @@
     },
     {
       "symbol": "RARE",
-      "price": 16.02,
+      "price": 15.97,
       "gap_pct": -0.87,
-      "rvol": 0.43,
+      "rvol": 0.42,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.72,
       "avg_volume": 4085890,
-      "screener_score": 0.2552
+      "screener_score": 0.2559
     },
     {
       "symbol": "SOFI",
-      "price": 14.97,
+      "price": 15.01,
       "gap_pct": 1.16,
-      "rvol": 0.65,
+      "rvol": 0.63,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.64,
       "avg_volume": 46623645,
-      "screener_score": 0.2544
+      "screener_score": 0.2538
     },
     {
       "symbol": "RIVN",
-      "price": 12.57,
+      "price": 12.59,
       "gap_pct": 1.13,
-      "rvol": 0.62,
+      "rvol": 0.59,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.53,
       "avg_volume": 24697430,
-      "screener_score": 0.2504
+      "screener_score": 0.25
     },
     {
       "symbol": "GTLB",
-      "price": 55.46,
+      "price": 55.69,
       "gap_pct": -0.02,
-      "rvol": 0.34,
+      "rvol": 0.35,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 2.74,
       "avg_volume": 4226520,
-      "screener_score": 0.2477
+      "screener_score": 0.2467
     },
     {
       "symbol": "LI",
-      "price": 11.52,
+      "price": 11.55,
       "gap_pct": -1.93,
-      "rvol": 0.79,
+      "rvol": 0.74,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.4,
       "avg_volume": 3018430,
-      "screener_score": 0.2412
+      "screener_score": 0.2407
     },
     {
       "symbol": "TTD",
-      "price": 12.56,
+      "price": 12.63,
       "gap_pct": -0.87,
       "rvol": 0.31,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.5,
       "avg_volume": 18023245,
-      "screener_score": 0.2295
+      "screener_score": 0.2284
     },
     {
       "symbol": "RBLX",
-      "price": 52.75,
+      "price": 52.88,
       "gap_pct": 0.1,
-      "rvol": 0.3,
+      "rvol": 0.29,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 2.36,
       "avg_volume": 12422785,
-      "screener_score": 0.2272
+      "screener_score": 0.2266
     }
   ]
 }

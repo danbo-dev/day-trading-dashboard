@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-26T19:01:07.322687Z",
-  "generated_at_mt": "2026-10-26 13:01 MT",
+  "generated_at": "2026-10-26T19:40:59.622294Z",
+  "generated_at_mt": "2026-10-26 13:40 MT",
   "count": 15,
   "tickers": [
     {
       "symbol": "NU",
-      "price": 12.57,
+      "price": 12.69,
       "gap_pct": -22.16,
-      "rvol": 3.99,
+      "rvol": 3.84,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.77,
@@ -16,9 +16,9 @@
     },
     {
       "symbol": "SE",
-      "price": 73.72,
+      "price": 74.08,
       "gap_pct": -3.93,
-      "rvol": 2.74,
+      "rvol": 2.56,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 3.74,
@@ -27,9 +27,9 @@
     },
     {
       "symbol": "RIOT",
-      "price": 12.85,
+      "price": 12.72,
       "gap_pct": -2.95,
-      "rvol": 1.01,
+      "rvol": 0.98,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 1.25,
@@ -38,9 +38,9 @@
     },
     {
       "symbol": "U",
-      "price": 40.38,
+      "price": 40.51,
       "gap_pct": -1.61,
-      "rvol": 0.7,
+      "rvol": 1.07,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 2.1,
@@ -49,9 +49,9 @@
     },
     {
       "symbol": "SMCI",
-      "price": 32.87,
+      "price": 32.93,
       "gap_pct": 0.56,
-      "rvol": 0.57,
+      "rvol": 0.55,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 2.68,
@@ -60,7 +60,7 @@
     },
     {
       "symbol": "AFRM",
-      "price": 69.35,
+      "price": 69.5,
       "gap_pct": 0.11,
       "rvol": 0.4,
       "pre_market_rvol": 0.0,
@@ -71,9 +71,9 @@
     },
     {
       "symbol": "SRPT",
-      "price": 17.78,
+      "price": 17.82,
       "gap_pct": -0.11,
-      "rvol": 0.28,
+      "rvol": 0.29,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.95,
@@ -82,91 +82,91 @@
     },
     {
       "symbol": "GTLB",
-      "price": 56.18,
+      "price": 56.42,
       "gap_pct": 0.16,
-      "rvol": 0.63,
+      "rvol": 0.62,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 2.76,
       "avg_volume": 4033215,
-      "screener_score": 0.2512
+      "screener_score": 0.2502
     },
     {
       "symbol": "UPST",
-      "price": 22.9,
+      "price": 23.01,
       "gap_pct": -0.67,
-      "rvol": 0.57,
+      "rvol": 0.59,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 1.04,
       "avg_volume": 3944670,
-      "screener_score": 0.2505
+      "screener_score": 0.2494
     },
     {
       "symbol": "RBLX",
-      "price": 53.3,
+      "price": 54.03,
       "gap_pct": -0.74,
       "rvol": 0.62,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
-      "atr": 2.29,
+      "atr": 2.33,
       "avg_volume": 10786810,
-      "screener_score": 0.2407
+      "screener_score": 0.2415
     },
     {
       "symbol": "SOFI",
-      "price": 14.45,
+      "price": 14.47,
       "gap_pct": -0.44,
-      "rvol": 0.76,
+      "rvol": 0.78,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.63,
       "avg_volume": 45362520,
-      "screener_score": 0.2334
+      "screener_score": 0.2331
     },
     {
       "symbol": "CMCSA",
-      "price": 21.96,
+      "price": 22.06,
       "gap_pct": -1.94,
       "rvol": 0.92,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.7,
       "avg_volume": 30945980,
-      "screener_score": 0.2273
+      "screener_score": 0.2266
     },
     {
       "symbol": "TTD",
-      "price": 12.57,
+      "price": 12.72,
       "gap_pct": -0.46,
-      "rvol": 0.37,
+      "rvol": 0.39,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.53,
       "avg_volume": 16799050,
-      "screener_score": 0.2269
+      "screener_score": 0.2244
     },
     {
       "symbol": "PINS",
-      "price": 20.88,
+      "price": 21.15,
       "gap_pct": -0.31,
-      "rvol": 1.15,
+      "rvol": 1.72,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.9,
       "avg_volume": 11565290,
-      "screener_score": 0.2264
+      "screener_score": 0.2236
     },
     {
       "symbol": "MGNI",
-      "price": 21.66,
+      "price": 21.67,
       "gap_pct": 0.0,
-      "rvol": 0.88,
+      "rvol": 0.86,
       "pre_market_rvol": 0.0,
       "pre_market_volume": 0,
       "atr": 0.96,
       "avg_volume": 1790430,
-      "screener_score": 0.2216
+      "screener_score": 0.2215
     }
   ]
 }
